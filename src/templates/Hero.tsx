@@ -1,42 +1,51 @@
+import { Button, Carousel } from 'flowbite-react';
 import Link from 'next/link';
 
 import { Background } from '../background/Background';
-import { Button } from '../button/Button';
-import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
-import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
-import { Logo } from './Logo';
 
 const Hero = () => (
-  <Background color="bg-gray-100">
-    <Section yPadding="py-6">
-      <NavbarTwoColumns logo={<Logo xl />}>
-        <li>
-          <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-            GitHub
-          </Link>
-        </li>
-        <li>
-          <Link href="/">Sign in</Link>
-        </li>
-      </NavbarTwoColumns>
-    </Section>
+  <Background color="">
+    <Section yPadding="py-6 ">
+      <div className="grid h-[80vh] items-center px-[100px] sm:grid-cols-1 md:grid-cols-2">
+        <div className="my-auto">
+          <h1>Une equipe d’Expert en santé juste pour vous et votre famille</h1>
+          <h2>
+            Avec doctamobile, ayez accès à une équipe permanente de medecins ( A
+            domicile, au travail, ou à distance), infirmier et autres
+            spécialiste de santé pour toute votre famille.
+          </h2>
+          <div className="flex flex-row">
+            <Button color="primary" className="mt-4">
+              <Link href="/about">En savoir plus</Link>
+            </Button>
+            <Button color="primary" className="mt-4">
+              <Link href="/about">Souscrire</Link>
+            </Button>
+          </div>
+        </div>
+        <Carousel className="h-[400px]" slideInterval={500}>
+          <div className="flex flex-col items-end justify-end">
+            <img src="/images/hero.png" alt="Hero" />
+            <img src="/images/hero.png" alt="Hero" />
+            <div className="absolute">
+              <div className="mb-[6px] h-[8px] w-[80px] rotate-[-5deg] bg-primary-300" />
+              <p>MALADIES CHRONIQUES</p>
+              <div className="ml-[20px] mt-[5px] h-[8px] w-[80px] rotate-[-5deg] bg-amber-200" />
+            </div>
+          </div>
 
-    <Section yPadding="pt-20 pb-32">
-      <HeroOneButton
-        title={
-          <>
-            {'The modern landing page for\n'}
-            <span className="text-primary-500">React developers</span>
-          </>
-        }
-        description="The easiest way to build a React landing page in seconds."
-        button={
-          <Link href="https://creativedesignsguru.com/category/nextjs/">
-            <Button xl>Download Your Free Theme</Button>
-          </Link>
-        }
-      />
+          <div className="flex flex-col items-end justify-end">
+            <img src="/images/hero.png" alt="Hero" />
+            <img src="/images/hero.png" alt="Hero" />
+            <div className="absolute">
+              <div className="mb-[6px] h-[8px] w-[80px] rotate-[-5deg] bg-primary-300" />
+              <p>AUTRES MALADIES</p>
+              <div className="ml-[20px] mt-[5px] h-[8px] w-[80px] rotate-[-5deg] bg-amber-200" />
+            </div>
+          </div>
+        </Carousel>
+      </div>
     </Section>
   </Background>
 );

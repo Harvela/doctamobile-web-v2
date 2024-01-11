@@ -15,10 +15,13 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "flowbite": "^2.2.1",
+    "flowbite-react": "^0.7.2",
     "next": "^14.0.4",
     "next-seo": "^6.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-select": "^5.8.0",
     "styled-jsx-plugin-postcss": "^4.0.1"
   },
   "devDependencies": {
