@@ -1,5 +1,5 @@
 import type { CustomFlowbiteTheme } from 'flowbite-react';
-import { Button, Flowbite, Navbar } from 'flowbite-react';
+import { Flowbite, Navbar } from 'flowbite-react';
 
 const customTheme: CustomFlowbiteTheme = {
   navbar: {
@@ -21,23 +21,22 @@ const NavbarGlobal = () => {
   return (
     <Flowbite theme={{ theme: customTheme }}>
       <Navbar className="px-[100px]">
-        <Navbar.Brand href="https://flowbite-react.com">
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            Docta Mobile
-          </span>
+        <Navbar.Brand href="#">
+          <img src="/fullLogo.png" className="mr-3 h-16" alt="FlowBite Logo" />
         </Navbar.Brand>
         <div className="flex md:order-2">
-          <Button>Get started</Button>
+          <button className="rounded-lg bg-primary-900 px-4 py-2 text-sm text-white">
+            Prendre rendez-vous
+          </button>
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
           <Navbar.Link href="#" active>
-            Home
+            Accueil
           </Navbar.Link>
-          <Navbar.Link href="#">About</Navbar.Link>
-          <Navbar.Link href="#">Services</Navbar.Link>
-          <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Contact</Navbar.Link>
+          <Navbar.Link href="#">Comment ca marche?</Navbar.Link>
+          <Navbar.Link href="#">Nos services</Navbar.Link>
+          <Navbar.Link href="#">Nos paquets</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
     </Flowbite>

@@ -2,6 +2,7 @@ import { Navbar } from '@/navigation/Navbar';
 
 import { Meta } from '../layout/Meta';
 import { AppConfig } from '../utils/AppConfig';
+import Counter from './Counter';
 import { Footer } from './Footer';
 import { Hero } from './Hero';
 import { HowItWork } from './HowItWorks';
@@ -16,6 +17,7 @@ const Base = () => (
     <HowItWork />
     <Service />
     <Pricing />
+    <Counter />
     <Footer />
   </div>
 );
