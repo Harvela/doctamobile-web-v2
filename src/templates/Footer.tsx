@@ -15,7 +15,7 @@ const links = {
 const Footer = () => (
   <footer className="bg-blue dark:bg-gray-800">
     <div className="mx-auto max-w-screen-xl">
-      <div className="p-8 md:flex md:justify-between">
+      <div className="flex flex-col justify-between p-8 lg:flex-row">
         <div className="mb-6 md:mb-0">
           <a href="#" className="flex items-center">
             <img
@@ -110,7 +110,8 @@ const Footer = () => (
             </a>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
+
+        <div className="grid gap-8 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <h2 className="mb-6 text-sm font-semibold uppercase text-white">
               Entreprise
@@ -139,6 +140,7 @@ const Footer = () => (
               ))}
             </ul>
           </div>
+
           <div>
             <h2 className="mb-6 text-sm font-semibold uppercase text-white">
               Nous contacter
@@ -165,7 +167,7 @@ const Footer = () => (
       </div>
       <hr className="border-gray-200 dark:border-gray-700 sm:mx-auto" />
       <div className="px-8 py-4 sm:flex sm:items-center sm:justify-between">
-        <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+        <span className="text-[10px] text-gray-500 dark:text-gray-400 sm:text-center">
           © 2022{' '}
           <a href="https://flowbite.com" className="hover:underline">
             Docta Mobile™

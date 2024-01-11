@@ -25,7 +25,7 @@ const Counter = () => {
 
   return (
     <section className="my-20">
-      <div className="m-auto grid w-[80%] grid-cols-3 rounded-lg bg-white p-8 shadow">
+      <div className="m-auto grid w-[80%] rounded-lg bg-white p-8 shadow lg:grid-cols-3">
         {counters.map((counter, key) => (
           <div className="text-center" key={key}>
             <h1 className="mb-4 text-4xl font-bold text-blue">

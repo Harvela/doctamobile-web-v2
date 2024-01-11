@@ -7,19 +7,19 @@ import { Section } from '../layout/Section';
 const Hero = () => (
   <Background color="">
     <Section yPadding="py-6 ">
-      <div className="grid h-[80vh] items-center px-[100px] sm:grid-cols-1 md:grid-cols-2">
+      <div className="grid h-[80vh] items-center px-4 md:grid-cols-2 lg:px-[100px]">
         <div className="my-auto pr-10">
-          <h1 className="text-[30px] font-bold text-blue">
+          <h1 className="text-lg font-bold text-blue lg:text-[30px]">
             Une equipe d’
             <span className="text-secondary-900">Expert en santé</span> juste
             pour vous et <span className="text-primary-900">votre famille</span>
           </h1>
-          <h2 className="mt-[20px] text-[17px] text-[#666]">
+          <h2 className="mt-[20px] text-sm text-[#666] lg:text-[17px]">
             Avec doctamobile, ayez accès à une équipe permanente de medecins ( A
             domicile, au travail, ou à distance), infirmier et autres
             spécialiste de santé pour toute votre famille.
           </h2>
-          <div className="mt-[20px] flex flex-row gap-5">
+          <div className="mt-[20px] flex flex-col gap-5 lg:flex-row">
             <Button color="primary" className="mt-4 bg-primary-900 text-white">
               <Link href="/about">Prendre rendez-vous</Link>
             </Button>
@@ -31,7 +31,7 @@ const Hero = () => (
             </Button>
           </div>
         </div>
-        <div className="items-end justify-end">
+        <div className="hidden items-end justify-end lg:block">
           <Carousel className="ml-auto h-[400px] w-[500px]" slideInterval={500}>
             <div className="flex flex-col items-end justify-end">
               <img

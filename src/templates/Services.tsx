@@ -39,10 +39,12 @@ const services = [
 const CustomDropdownIndicator = () => null;
 
 const Service = () => (
-  <div className="bg-white px-[100px] py-[60px]">
-    <h1 className="mb-8 mt-5 text-2xl font-bold text-blue">Nos services</h1>
-    <div className="flex w-full flex-row gap-8 bg-primary-200 p-8">
-      <div className="w-[30%] rounded-xl bg-white p-8">
+  <div className="bg-white px-4 py-[60px] lg:px-[100px]">
+    <h1 className="mb-8 mt-5 text-lg font-bold text-blue lg:text-2xl">
+      Nos services
+    </h1>
+    <div className="flex w-full flex-col gap-8 bg-primary-200 p-4 lg:flex-row lg:p-8">
+      <div className="h-[70vh] w-full rounded-xl bg-white p-4 lg:w-[30%] lg:p-8">
         <ReactSelect
           menuIsOpen
           options={services}
@@ -64,10 +66,10 @@ const Service = () => (
           }}
         />
       </div>
-      <div className="h-[70vh] w-[65%] grow rounded-xl bg-white p-8 shadow-sm">
+      <div className="w-full grow rounded-xl bg-white p-8 shadow-sm lg:h-[70vh] lg:w-[65%]">
         <h2 className="mb-8 text-lg font-bold text-blue">Nos specialistes</h2>
 
-        <div className="grid grid-cols-3 gap-3">
+        <div className=" flex flex-col gap-3 lg:grid lg:grid-cols-3">
           <div className="border-primary-100 border-1 flex flex-col items-center justify-between border p-4 shadow-sm">
             <img
               src="/assets/images/how-it-work/med3.svg"

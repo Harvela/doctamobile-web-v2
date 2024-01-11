@@ -20,11 +20,15 @@ const customTheme: CustomFlowbiteTheme = {
 const NavbarGlobal = () => {
   return (
     <Flowbite theme={{ theme: customTheme }}>
-      <Navbar className="px-[100px]">
+      <Navbar className="px-4 lg:px-[100px]">
         <Navbar.Brand href="#">
-          <img src="/fullLogo.png" className="mr-3 h-16" alt="FlowBite Logo" />
+          <img
+            src="/fullLogo.png"
+            className="h-8 lg:mr-3 lg:h-16"
+            alt="FlowBite Logo"
+          />
         </Navbar.Brand>
-        <div className="flex md:order-2">
+        <div className="flex gap-8 md:order-2">
           <button className="rounded-lg bg-primary-900 px-4 py-2 text-sm text-white">
             Prendre rendez-vous
           </button>
