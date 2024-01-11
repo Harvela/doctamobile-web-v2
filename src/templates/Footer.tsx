@@ -10,7 +10,7 @@ const Footer = () => (
               alt="FlowBite Logo"
             />
             <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-              Flowbite
+              Docta Mobile
             </span>
           </a>
         </div>
@@ -22,7 +22,7 @@ const Footer = () => (
             <ul className="text-gray-600 dark:text-gray-400">
               <li className="mb-4">
                 <a href="https://flowbite.com" className="hover:underline">
-                  Flowbite
+                  Docta Mobile
                 </a>
               </li>
               <li>
@@ -79,7 +79,7 @@ const Footer = () => (
         <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
           © 2022{' '}
           <a href="https://flowbite.com" className="hover:underline">
-            Flowbite™
+            Docta Mobile™
           </a>
           . All Rights Reserved.
         </span>
