@@ -6,16 +6,16 @@ const pricesList = [
     prices: [
       {
         id: 1,
-        title: '1 A 4 pers',
+        title: '1 - 4 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$0',
-        priceList: { moi: 25, trimestre: 72.5 },
+        priceList: { month: 25, trimestre: 72.5, semestre: 142.5, year: 270 },
         list: [
-          'Rhume',
-          'Grippe',
-          'Fievre',
-          'Malaria',
-          'Rhume',
+          'Consultation sur demande ',
+          'Visite à Domicile de suivi ',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Télémédecine',
           'Grippe',
           'Fievre',
           'Malaria',
@@ -23,19 +23,16 @@ const pricesList = [
       },
       {
         id: 2,
-        title: 'Starter',
+        title: '5 - 8 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$20',
+        priceList: { month: 35, trimestre: 101.5, semestre: 199.5, year: 378 },
         list: [
-          'Rhume',
-          'Grippe',
-          'Fievre',
-          'Malaria',
-          'Rhume',
-          'Grippe',
-          'Fievre',
-          'Malaria',
-          'Rhume',
+          'Consultation sur demande ',
+          'Visite à Domicile de suivi ',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Télémédecine',
           'Grippe',
           'Fievre',
           'Malaria',
@@ -43,19 +40,16 @@ const pricesList = [
       },
       {
         id: 3,
-        title: 'Medium',
+        title: '9 - 12 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$40',
+        priceList: { month: 35, trimestre: 101.5, semestre: 199.5, year: 378 },
         list: [
-          'Rhume',
-          'Grippe',
-          'Fievre',
-          'Malaria',
-          'Rhume',
-          'Grippe',
-          'Fievre',
-          'Malaria',
-          'Rhume',
+          'Consultation sur demande ',
+          'Visite à Domicile de suivi ',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Télémédecine',
           'Grippe',
           'Fievre',
           'Malaria',
@@ -63,41 +57,38 @@ const pricesList = [
       },
       {
         id: 4,
-        title: 'Premium',
+        title: '13 - 15 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$100',
+        priceList: { month: 45, trimestre: 130.5, semestre: 256.5, year: 486 },
         list: [
-          'Rhume',
-          'Grippe',
-          'Fievre',
-          'Malaria',
-          'Rhume',
-          'Grippe',
-          'Fievre',
-          'Malaria',
-          'Rhume',
+          'Consultation sur demande ',
+          'Visite à Domicile de suivi ',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Télémédecine',
           'Grippe',
           'Fievre',
           'Malaria',
         ],
       },
     ],
-    name: 'JAMAA A',
+    name: 'JAMA A',
   },
   {
     prices: [
       {
         id: 1,
-        title: 'Free',
+        title: '1 - 4 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$0',
-        priceList: { moi: '$0', trimestre: '$0', annee: '$0' },
+        priceList: { month: 10, trimestre: 29, semestre: 57, year: 108 },
         list: [
-          'Rhume',
-          'Grippe',
-          'Fievre',
-          'Malaria',
-          'Rhume',
+          'Consultation sur demande ',
+          'Visite à Domicile de suivi ',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Télémédecine',
           'Grippe',
           'Fievre',
           'Malaria',
@@ -105,19 +96,33 @@ const pricesList = [
       },
       {
         id: 2,
-        title: 'Starter',
+        title: '5 - 8 personnes',
         desc: 'Best option for personal use & for your next project.',
-        price: '$20',
+        price: '$0',
+        priceList: { month: 20, trimestre: 58, semestre: 114, year: 216 },
         list: [
-          'Rhume',
+          'Consultation sur demande ',
+          'Visite à Domicile de suivi ',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Télémédecine',
           'Grippe',
           'Fievre',
           'Malaria',
-          'Rhume',
-          'Grippe',
-          'Fievre',
-          'Malaria',
-          'Rhume',
+        ],
+      },
+      {
+        id: 3,
+        title: '9 - 12 personnes',
+        desc: 'Best option for personal use & for your next project.',
+        price: '$0',
+        priceList: { month: 30, trimestre: 87, semestre: 171, year: 324 },
+        list: [
+          'Consultation sur demande ',
+          'Visite à Domicile de suivi ',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Télémédecine',
           'Grippe',
           'Fievre',
           'Malaria',
@@ -125,25 +130,200 @@ const pricesList = [
       },
       {
         id: 4,
-        title: 'Premium',
+        title: '13 - 15 personnes',
         desc: 'Best option for personal use & for your next project.',
-        price: '$100',
+        price: '$0',
+        priceList: { month: 40, trimestre: 116, semestre: 228, year: 432 },
         list: [
-          'Rhume',
-          'Grippe',
-          'Fievre',
-          'Malaria',
-          'Rhume',
-          'Grippe',
-          'Fievre',
-          'Malaria',
-          'Rhume',
+          'Consultation sur demande ',
+          'Visite à Domicile de suivi ',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Télémédecine',
           'Grippe',
           'Fievre',
           'Malaria',
         ],
       },
     ],
+    name: 'JAMA B',
+  },
+  {
+    prices: [
+      {
+        id: 1,
+        title: 'AFIA 1',
+        desc: 'Best option for personal use & for your next project.',
+        price: '$0',
+        priceList: {
+          moi: '$50',
+          trimestre: '$145',
+          semestre: '$285',
+          annee: '$540',
+        },
+        list: [
+          'Consultation sur demande',
+          'Visite à Domicile de suivi',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Check-up santé (bilan de santé) ',
+          'Ambulance',
+          'Prélèvement à domicile',
+          'Livraison des médicaments à domicile',
+          'Hospitalisation à Domicile',
+          'Consultation à Domicile en dehors de Goma',
+          'Télémédecine',
+          'Facilitation de tourisme médical & évacuation à l’étranger',
+          'Accompagnement médical',
+        ],
+      },
+      {
+        id: 2,
+        title: 'AFIA 2',
+        desc: 'Best option for personal use & for your next project.',
+        price: '$20',
+        priceList: {
+          moi: '$75',
+          trimestre: '$217.5',
+          semestre: '$427.5',
+          annee: '$810',
+        },
+        list: [
+          'Consultation sur demande',
+          'Visite à Domicile de suivi',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Check-up santé (bilan de santé) ',
+          'Ambulance',
+          'Prélèvement à domicile',
+          'Livraison des médicaments à domicile',
+          'Hospitalisation à Domicile',
+          'Consultation à Domicile en dehors de Goma',
+          'Télémédecine',
+          'Facilitation de tourisme médical & évacuation à l’étranger',
+          'Accompagnement médical',
+        ],
+      },
+      {
+        id: 4,
+        title: 'AFIA 3',
+        desc: 'Best option for personal use & for your next project.',
+        price: '$100',
+        priceList: {
+          moi: '$100',
+          trimestre: '$290',
+          semestre: '$570',
+          annee: '$1080',
+        },
+        list: [
+          'Consultation sur demande',
+          'Visite à Domicile de suivi',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Check-up santé (bilan de santé) ',
+          'Ambulance',
+          'Prélèvement à domicile',
+          'Livraison des médicaments à domicile',
+          'Hospitalisation à Domicile',
+          'Consultation à Domicile en dehors de Goma',
+          'Télémédecine',
+          'Facilitation de tourisme médical & évacuation à l’étranger',
+          'Accompagnement médical',
+        ],
+      },
+    ],
+    name: 'AFIA ',
+  },
+  {
+    prices: [
+      {
+        id: 1,
+        title: 'VIP /2',
+        desc: 'Best option for personal use & for your next project.',
+        price: '$0',
+        priceList: {
+          moi: '$150',
+          trimestre: '$435',
+          semestre: '$855',
+          annee: '$1620',
+        },
+        list: [
+          'Consultation sur demande',
+          'Visite à Domicile de suivi',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Visite à domicile (VAD) mensuel systématique',
+          'Check-up santé (bilan de santé)',
+          'Ambulance',
+          'Prélèvement à domicile',
+          'Livraison des médicaments à domicile',
+          'Hospitalisation à Domicile',
+          'Consultation à Domicile en dehors de Goma',
+          'Télémédecine',
+          'Facilitation de tourisme médical & évacuation à l’étranger',
+          'Accompagnement médical',
+        ],
+      },
+      {
+        id: 2,
+        title: 'VIP',
+        desc: 'Best option for personal use & for your next project.',
+        price: '$20',
+        priceList: {
+          moi: '$200',
+          trimestre: '$580',
+          semestre: '$1140',
+          annee: '$2160',
+        },
+        list: [
+          'Consultation sur demande',
+          'Visite à Domicile de suivi',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Visite à domicile (VAD) mensuel systématique',
+          'Check-up santé (bilan de santé) ',
+          'Ambulance',
+          'Prélèvement à domicile',
+          'Livraison des médicaments à domicile',
+          'Hospitalisation à Domicile',
+          'Consultation à Domicile en dehors de Goma',
+          'Télémédecine',
+          'Facilitation de tourisme médical & évacuation à l’étranger',
+          'Accompagnement médical',
+          'Prise en charge médicale',
+        ],
+      },
+      {
+        id: 4,
+        title: 'VIP +',
+        desc: 'Best option for personal use & for your next project.',
+        price: '$100',
+        priceList: {
+          moi: '$250',
+          trimestre: '$725',
+          semestre: '$1425',
+          annee: '$2700',
+        },
+        list: [
+          'Consultation sur demande',
+          'Visite à Domicile de suivi',
+          'Consultation Super Spéciale & spécifique',
+          'Services Promotion & prévention',
+          'Visite à domicile (VAD) mensuel systématique',
+          'Check-up santé (bilan de santé) ',
+          'Ambulance',
+          'Prélèvement à domicile',
+          'Livraison des médicaments à domicile',
+          'Hospitalisation à Domicile',
+          'Consultation à Domicile en dehors de Goma',
+          'Télémédecine',
+          'Facilitation de tourisme médical & évacuation à l’étranger',
+          'Accompagnement médical',
+          'Prise en charge médicale',
+        ],
+      },
+    ],
+    name: 'VIP',
   },
 ];
 
@@ -232,6 +412,16 @@ const Pricing = () => {
         </Button>
         <Button
           className={
+            activeFrequency === 'semestre'
+              ? 'bg-white text-primary-900'
+              : 'border-2 border-white bg-primary-900 text-white'
+          }
+          onClick={() => setActiveFrequency('semestre')}
+        >
+          Semestre
+        </Button>
+        <Button
+          className={
             activeFrequency === 'year'
               ? 'bg-white text-primary-900'
               : 'border-2 border-white bg-primary-900 text-white'
@@ -267,8 +457,10 @@ const Pricing = () => {
               <Tabs.Item
                 title={
                   <div>
-                    <h1 className="text-[17px] font-bold">JAMAA 1</h1>
-                    <p className="text-[12px] font-medium">120 USD - 150 USD</p>
+                    <h1 className="text-[17px] font-bold">
+                      {pricesList[0]?.name}
+                    </h1>
+                    <p className="text-[12px] font-medium">25 USD - 486 USD</p>
                   </div>
                 }
                 active
@@ -281,8 +473,10 @@ const Pricing = () => {
               <Tabs.Item
                 title={
                   <div>
-                    <h1 className="text-[17px] font-bold">JAMAA 1</h1>
-                    <p className="text-[12px] font-medium">120 USD - 150 USD</p>
+                    <h1 className="text-[17px] font-bold">
+                      {pricesList[1]?.name}
+                    </h1>
+                    <p className="text-[12px] font-medium">10 USD - 432 USD</p>
                   </div>
                 }
               >
@@ -294,22 +488,34 @@ const Pricing = () => {
               <Tabs.Item
                 title={
                   <div>
-                    <h1 className="text-[17px] font-bold">JAMAA 1</h1>
-                    <p className="text-[12px] font-medium">120 USD - 150 USD</p>
+                    <h1 className="text-[17px] font-bold">
+                      {pricesList[2]?.name}
+                    </h1>
+                    <p className="text-[12px] font-medium">50 USD - 1080 USD</p>
                   </div>
                 }
               >
-                <div></div>
+                <PricingCard
+                  prices={pricesList[2]?.prices || []}
+                  frequency={activeFrequency}
+                />
               </Tabs.Item>
               <Tabs.Item
                 title={
                   <div>
-                    <h1 className="text-[17px] font-bold">JAMAA 1</h1>
-                    <p className="text-[12px] font-medium">120 USD - 150 USD</p>
+                    <h1 className="text-[17px] font-bold">
+                      {pricesList[3]?.name}
+                    </h1>
+                    <p className="text-[12px] font-medium">
+                      150 USD - 2700 USD
+                    </p>
                   </div>
                 }
               >
-                <div></div>
+                <PricingCard
+                  prices={pricesList[3]?.prices || []}
+                  frequency={activeFrequency}
+                />
               </Tabs.Item>
             </Tabs>
           </div>
