@@ -1,5 +1,6 @@
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { Flowbite, Navbar } from 'flowbite-react';
+import { Link } from 'react-scroll';
 
 export type NavbarProps = {
   // Prop types go here
@@ -25,12 +26,15 @@ const customTheme: CustomFlowbiteTheme = {
 const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
   return (
     <Flowbite theme={{ theme: customTheme }}>
-      <Navbar className="px-4 lg:px-[100px]">
+      <Navbar
+        className="px-4 lg:px-[100px]"
+        style={{ position: 'fixed', width: '100%', zIndex: 99999999 }}
+      >
         <Navbar.Brand href="#">
           <img
             src="/fullLogo.png"
             className="h-8 lg:mr-3 lg:h-16"
-            alt="FlowBite Logo"
+            alt="DoctaMobile Logo"
           />
         </Navbar.Brand>
         <div className="flex gap-8 md:order-2">
@@ -45,12 +49,42 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="#" active>
+          <Link
+            offset={-100}
+            activeClass="text-primary-900 font-bold"
+            to="home"
+            smooth
+            spy
+          >
             Accueil
-          </Navbar.Link>
-          <Navbar.Link href="#">Comment ca marche?</Navbar.Link>
-          <Navbar.Link href="#">Nos services</Navbar.Link>
-          <Navbar.Link href="#">Nos paquets</Navbar.Link>
+          </Link>
+          <Link
+            activeClass="text-primary-900 font-bold"
+            to="how-it-work"
+            smooth
+            spy
+            offset={-100}
+          >
+            Comment ca marche?
+          </Link>
+          <Link
+            activeClass="text-primary-900 font-bold"
+            to="services"
+            smooth
+            spy
+            offset={-100}
+          >
+            Nos services
+          </Link>
+          <Link
+            activeClass="text-primary-900 font-bold"
+            to="pricing"
+            smooth
+            spy
+            offset={-100}
+          >
+            Nos paquets
+          </Link>
         </Navbar.Collapse>
       </Navbar>
     </Flowbite>

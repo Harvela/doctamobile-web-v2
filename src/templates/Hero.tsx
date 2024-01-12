@@ -9,10 +9,13 @@ export type HeroProps = {
   setOpenModal?: (value: boolean) => void;
 };
 
-const Hero: React.FC<HeroProps> = ({ setOpenModal }) => (
+const Hero: React.FC<HeroProps> = () => (
   <Background color="">
     <Section yPadding="py-6 ">
-      <div className="grid h-[80vh] items-center px-4 md:grid-cols-2 lg:px-[100px]">
+      <div
+        className="grid h-[80vh] items-center px-4 md:grid-cols-2 lg:px-[100px]"
+        id="home"
+      >
         <div className="my-auto pr-10">
           <h1 className="text-lg font-bold text-blue lg:text-[30px]">
             Une equipe d’
@@ -26,16 +29,13 @@ const Hero: React.FC<HeroProps> = ({ setOpenModal }) => (
           </h2>
           <div className="mt-[20px] flex flex-col gap-5 lg:flex-row">
             <Button color="primary" className="mt-4 bg-primary-900 text-white">
-              <Link href="/about">Prendre rendez-vous</Link>
+              <Link href="/about">Nous Contacter</Link>
             </Button>
             <Button
               color="primary"
               className="mt-4 bg-primary-300 text-primary-900"
-              onClick={() => {
-                setOpenModal?.(true);
-              }}
             >
-              Enregistrez ma famille
+              <Link href="#pricing">Souscrire ma famille</Link>
             </Button>
           </div>
         </div>

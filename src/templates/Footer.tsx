@@ -168,7 +168,7 @@ const Footer = () => (
       <hr className="border-gray-200 dark:border-gray-700 sm:mx-auto" />
       <div className="px-8 py-4 sm:flex sm:items-center sm:justify-between">
         <span className="text-[10px] text-gray-500 dark:text-gray-400 sm:text-center">
-          © 2022{' '}
+          © {new Date().getFullYear()}{' '}
           <a href="https://flowbite.com" className="hover:underline">
             Docta Mobile™
           </a>

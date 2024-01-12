@@ -39,7 +39,7 @@ const services = [
 const CustomDropdownIndicator = () => null;
 
 const Service = () => (
-  <div className="bg-white px-4 py-[60px] lg:px-[100px]">
+  <div className="bg-white px-4 py-[60px] lg:px-[100px]" id="services">
     <h1 className="mb-8 mt-5 text-lg font-bold text-blue lg:text-2xl">
       Nos services
     </h1>

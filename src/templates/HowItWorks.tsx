@@ -1,5 +1,10 @@
+import Link from 'next/link';
+
 const HowItWork = () => (
-  <div className="to-slate-white bg-gradient-to-b from-secondary-100 px-4 pt-[15px] lg:px-[100px]">
+  <div
+    id="how-it-work"
+    className="to-slate-white bg-gradient-to-b from-secondary-100 px-4 pt-[15px] lg:px-[100px]"
+  >
     <h1 className="mb-8 mt-5 text-lg font-bold text-blue lg:text-2xl">
       Comment ca marche ?
     </h1>
@@ -9,9 +14,12 @@ const HowItWork = () => (
         <p className="my-4 text-sm font-semibold text-blue">
           Vous faites une demande d’abonnement
         </p>
-        <button className="rounded-lg bg-primary-900 px-4 py-1 text-sm font-semibold text-white">
-          Demander
-        </button>
+        <Link
+          className="rounded-lg bg-primary-900 px-4 py-1 text-sm font-semibold text-white"
+          href="#pricing"
+        >
+          Souscrire
+        </Link>
       </div>
       <div className="h-[250px] rounded-xl bg-primary-900 bg-opacity-10 p-4">
         <img src="/assets/images/how-it-work/med2.svg" className="h-[100px]" />

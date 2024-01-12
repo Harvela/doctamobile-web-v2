@@ -193,7 +193,7 @@ const PricingCard: React.FC<{
           href="#"
           className="rounded-lg bg-white px-5 py-2.5 text-center text-sm font-medium text-primary-900 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 dark:text-white dark:focus:ring-primary-900"
         >
-          Get started
+          Souscrire
         </a>
       </div>
     ))}
@@ -203,72 +203,78 @@ const PricingCard: React.FC<{
 const Pricing = () => {
   const [activeFrequency, setActiveFrequency] = React.useState<string>('month');
   return (
-    <div className="bg-primary-900 pt-[15px]">
+    <div className="bg-primary-900 pt-[15px]" id="pricing">
       <h1 className="mb-4 mt-5 text-center text-2xl font-bold text-white">
-        Nos paquets
+        Nos paquets de souscription
       </h1>
-      <div className="align-center mx-auto flex items-center justify-center gap-5 text-white">
-        <p className="mr-4">Afficher les prix par</p>
-        <div className="h-[25px] w-[1px] bg-white"></div>
-        <Button
-          className={
-            activeFrequency === 'month'
-              ? 'bg-white text-primary-900'
-              : 'border-2 border-white bg-primary-900 text-white'
-          }
-          onClick={() => setActiveFrequency('month')}
-        >
-          Moi
-        </Button>
-        <Button
-          className={
-            activeFrequency === 'trimestre'
-              ? 'bg-white text-primary-900'
-              : 'border-2 border-white bg-primary-900 text-white'
-          }
-          onClick={() => setActiveFrequency('trimestre')}
-        >
-          Trimestre
-        </Button>
-        <Button
-          className={
-            activeFrequency === 'year'
-              ? 'bg-white text-primary-900'
-              : 'border-2 border-white bg-primary-900 text-white'
-          }
-          onClick={() => setActiveFrequency('year')}
-        >
-          Annee
-        </Button>
+      <div className="md:align-center ml-5 items-center justify-center text-white sm:flex-col md:mx-auto md:flex md:flex-row md:gap-5">
+        <p className="mb-3 sm:text-center md:mr-4">Afficher les prix par</p>
+        <div className="bg-white sm:my-[10px] sm:h-[0px] md:visible md:h-[25px] md:w-[1px]"></div>
+        <div className="flex gap-5">
+          <Button
+            className={
+              activeFrequency === 'month'
+                ? 'bg-white text-primary-900'
+                : 'border-2 border-white bg-primary-900 text-white'
+            }
+            onClick={() => setActiveFrequency('month')}
+          >
+            Moi
+          </Button>
+          <Button
+            className={
+              activeFrequency === 'trimestre'
+                ? 'bg-white text-primary-900'
+                : 'border-2 border-white bg-primary-900 text-white'
+            }
+            onClick={() => setActiveFrequency('trimestre')}
+          >
+            Trimestre
+          </Button>
+          <Button
+            className={
+              activeFrequency === 'year'
+                ? 'bg-white text-primary-900'
+                : 'border-2 border-white bg-primary-900 text-white'
+            }
+            onClick={() => setActiveFrequency('year')}
+          >
+            Annee
+          </Button>
+        </div>
       </div>
-      <section className="mt-[-15px]">
+      <section className="md:mt-[-15px]">
         <div className="mx-auto max-w-screen-xl p-4 lg:px-6 lg:py-16">
-          <div className="rounded-[10px] bg-white px-4 py-8">
+          <div className="rounded-[10px] bg-white px-4 py-8 sm:mt-4">
             <Tabs
               aria-label="Pills"
               style="pills"
               theme={{
                 tablist: {
                   tabitem: {
-                    base: 'px-4 py-2 text-sm text-primary-900',
+                    base: 'px-4 py-2 text-[12px] text-primary-900',
                     styles: {
                       pills: {
                         active: {
-                          on: 'bg-primary-900 text-white px-4 py-2 rounded-[10px] text-sm ',
-                          off: 'bg-white text-primary-900',
+                          on: 'bg-primary-900 text-white px-4 py-2 rounded-[10px] text-[12px] ',
+                          off: 'bg-white text-primary-900 text-[12px]',
                         },
                       },
                     },
                   },
-                  base: 'w-full flex flex-row gap-10 justify-center mb-10',
+                  base: 'w-full md:flex md:flex-row gap-10 grid grid-cols-2 md:justify-center mb-10 text-[12px]',
                 },
               }}
             >
               <Tabs.Item
                 title={
                   <div>
-                    <h1 className="text-[17px] font-bold">JAMAA 1</h1>
-                    <p className="text-[12px] font-medium">120 USD - 150 USD</p>
+                    <h1 className="sm:text[12px] font-bold md:text-[17px]">
+                      JAMAA 1
+                    </h1>
+                    <p className="sm:text[10px] text-[12px] font-medium sm:hidden">
+                      120 USD - 150 USD
+                    </p>
                   </div>
                 }
                 active
@@ -281,8 +287,12 @@ const Pricing = () => {
               <Tabs.Item
                 title={
                   <div>
-                    <h1 className="text-[17px] font-bold">JAMAA 1</h1>
-                    <p className="text-[12px] font-medium">120 USD - 150 USD</p>
+                    <h1 className="sm:text[12px] font-bold md:text-[17px]">
+                      JAMAA 1
+                    </h1>
+                    <p className="sm:text[10px] text-[12px] font-medium sm:hidden">
+                      120 USD - 150 USD
+                    </p>
                   </div>
                 }
               >
@@ -294,8 +304,12 @@ const Pricing = () => {
               <Tabs.Item
                 title={
                   <div>
-                    <h1 className="text-[17px] font-bold">JAMAA 1</h1>
-                    <p className="text-[12px] font-medium">120 USD - 150 USD</p>
+                    <h1 className="sm:text[12px] font-bold md:text-[17px]">
+                      JAMAA 1
+                    </h1>
+                    <p className="sm:text[10px] text-[12px] font-medium sm:hidden">
+                      120 USD - 150 USD
+                    </p>
                   </div>
                 }
               >
@@ -304,8 +318,12 @@ const Pricing = () => {
               <Tabs.Item
                 title={
                   <div>
-                    <h1 className="text-[17px] font-bold">JAMAA 1</h1>
-                    <p className="text-[12px] font-medium">120 USD - 150 USD</p>
+                    <h1 className="sm:text[12px] font-bold md:text-[17px]">
+                      JAMAA 1
+                    </h1>
+                    <p className="sm:text[10px] hidden text-[12px] font-medium md:visible">
+                      120 USD - 150 USD
+                    </p>
                   </div>
                 }
               >
