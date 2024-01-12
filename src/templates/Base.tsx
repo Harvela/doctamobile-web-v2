@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { Navbar } from '@/navigation/Navbar';
 
 import { Meta } from '../layout/Meta';
@@ -7,19 +9,24 @@ import { Footer } from './Footer';
 import { Hero } from './Hero';
 import { HowItWork } from './HowItWorks';
 import { Pricing } from './Pricing';
+import { RegisterFamily } from './RegisterFamily';
 import { Service } from './Services';
 
-const Base = () => (
-  <div className="text-gray-600 antialiased">
-    <Meta title={AppConfig.title} description={AppConfig.description} />
-    <Navbar />
-    <Hero />
-    <HowItWork />
-    <Service />
-    <Pricing />
-    <Counter />
-    <Footer />
-  </div>
-);
+const Base = () => {
+  const [openModal, setOpenModal] = useState(false);
+  return (
+    <div className="text-gray-600 antialiased">
+      <Meta title={AppConfig.title} description={AppConfig.description} />
+      <RegisterFamily setOpenModal={setOpenModal} openModal={openModal} />
+      <Navbar />
+      <Hero setOpenModal={setOpenModal} />
+      <HowItWork />
+      <Service />
+      <Pricing />
+      <Counter />
+      <Footer />
+    </div>
+  );
+};
 
 export { Base };

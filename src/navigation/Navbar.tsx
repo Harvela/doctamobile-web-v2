@@ -1,6 +1,11 @@
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { Flowbite, Navbar } from 'flowbite-react';
 
+export type NavbarProps = {
+  // Prop types go here
+  setOpenModal?: (value: boolean) => void;
+};
+
 const customTheme: CustomFlowbiteTheme = {
   navbar: {
     link: {
@@ -17,7 +22,7 @@ const customTheme: CustomFlowbiteTheme = {
   },
 };
 
-const NavbarGlobal = () => {
+const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
   return (
     <Flowbite theme={{ theme: customTheme }}>
       <Navbar className="px-4 lg:px-[100px]">
@@ -29,7 +34,12 @@ const NavbarGlobal = () => {
           />
         </Navbar.Brand>
         <div className="flex gap-8 md:order-2">
-          <button className="rounded-lg bg-primary-900 px-4 py-2 text-sm text-white">
+          <button
+            className="rounded-lg bg-primary-900 px-4 py-2 text-sm text-white"
+            onClick={() => {
+              setOpenModal?.(true);
+            }}
+          >
             Prendre rendez-vous
           </button>
           <Navbar.Toggle />

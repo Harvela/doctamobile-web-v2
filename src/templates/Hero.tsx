@@ -1,10 +1,15 @@
 import { Button, Carousel } from 'flowbite-react';
 import Link from 'next/link';
+import React from 'react';
 
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 
-const Hero = () => (
+export type HeroProps = {
+  setOpenModal?: (value: boolean) => void;
+};
+
+const Hero: React.FC<HeroProps> = ({ setOpenModal }) => (
   <Background color="">
     <Section yPadding="py-6 ">
       <div className="grid h-[80vh] items-center px-4 md:grid-cols-2 lg:px-[100px]">
@@ -26,8 +31,11 @@ const Hero = () => (
             <Button
               color="primary"
               className="mt-4 bg-primary-300 text-primary-900"
+              onClick={() => {
+                setOpenModal?.(true);
+              }}
             >
-              <Link href="/about">Enregistrez ma famille </Link>
+              Enregistrez ma famille
             </Button>
           </div>
         </div>
@@ -37,35 +45,19 @@ const Hero = () => (
               <img
                 src="/assets/images/home/img1.jpg"
                 alt="Hero"
-                className="mr-[170px] w-[280px] rounded-md"
+                className="rounded-md md:mr-[120px] md:w-[210px] lg:mr-[190px] lg:w-[250px]"
               />
               <img
                 src="/assets/images/home/img2.jpg"
                 alt="Hero"
-                className="mt-[-40px] w-[350px] rounded-md"
+                className="mt-[-40px] rounded-md md:w-[27px]  lg:w-[320px]"
               />
               <div className="absolute top-[40px] flex flex-col items-center justify-center">
                 <div className="mb-[6px] h-[8px] w-[80px] rotate-[-5deg] bg-primary-300" />
-                <p className="text-[12px] font-bold">MALADIES CHRONIQUES</p>
-                <div className="ml-[20px] mt-[5px] h-[8px] w-[80px] rotate-[-5deg] bg-amber-200" />
-              </div>
-            </div>
-
-            <div className="flex flex-col items-end justify-end">
-              <img
-                src="/assets/images/home/img1.jpg"
-                alt="Hero"
-                className="mr-[170px] w-[280px] rounded-md"
-              />
-              <img
-                src="/assets/images/home/img2.jpg"
-                alt="Hero"
-                className="mt-[-40px] w-[350px] rounded-md"
-              />
-              <div className="absolute top-[40px] flex flex-col items-center justify-center">
-                <div className="mb-[6px] h-[8px] w-[80px] rotate-[-5deg] bg-primary-300" />
-                <p className="text-[12px] font-bold">MALADIES CHRONIQUES</p>
-                <div className="ml-[20px] mt-[5px] h-[8px] w-[80px] rotate-[-5deg] bg-amber-200" />
+                <p className="text-[12px] font-bold text-primary-900">
+                  MALADIES CHRONIQUES
+                </p>
+                <div className=" ml-[20px] mt-[5px] h-[8px] w-[80px] rotate-[-5deg] bg-secondary-200" />
               </div>
             </div>
           </Carousel>
