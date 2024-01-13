@@ -11,9 +11,9 @@ export type HeroProps = {
 
 const Hero: React.FC<HeroProps> = () => (
   <Background color="">
-    <Section yPadding="py-6 ">
+    <Section yPadding="py-6">
       <div
-        className="grid h-[80vh] items-center px-4 md:grid-cols-2 lg:px-[100px]"
+        className="grid h-[80vh] items-center px-4 md:mt-[100px] md:grid-cols-2 lg:mt-[100px] lg:px-[100px]"
         id="home"
       >
         <div className="my-auto pr-10">

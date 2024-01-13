@@ -64,7 +64,11 @@ const RegisterFamily: React.FC<RegisterFamilyProps> = ({
   const formRef = React.useRef<HTMLFormElement>(null);
 
   return (
-    <Modal show={openModal} onClose={() => setOpenModal(false)}>
+    <Modal
+      show={openModal}
+      onClose={() => setOpenModal(false)}
+      style={{ zIndex: 999999999 }}
+    >
       <Modal.Header>Enregistrer ma famille</Modal.Header>
       <Modal.Body className="">
         {success && (
