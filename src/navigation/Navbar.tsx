@@ -1,6 +1,10 @@
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { Flowbite, Navbar } from 'flowbite-react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-scroll';
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
 
 export type NavbarProps = {
   // Prop types go here
@@ -24,6 +28,12 @@ const customTheme: CustomFlowbiteTheme = {
 };
 
 const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
+  const [token, setToken] = React.useState<string | null>(null);
+  useEffect(() => {
+    const tokend = cookies.get('token');
+    console.log(tokend);
+    setToken(tokend);
+  }, []);
   return (
     <Flowbite theme={{ theme: customTheme }}>
       <Navbar
@@ -41,10 +51,15 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
           <button
             className="rounded-lg bg-primary-900 px-4 py-2 text-sm text-white"
             onClick={() => {
-              setOpenModal?.(true);
+              if (token) {
+                window.location.href =
+                  process.env.APP_LINK || 'https://app.doctabyte.com';
+              } else {
+                setOpenModal?.(true);
+              }
             }}
           >
-            Prendre rendez-vous
+            {token ? 'Tableau de bord' : 'Prendre rendez-vous'}
           </button>
           <Navbar.Toggle />
         </div>

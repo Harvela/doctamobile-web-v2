@@ -337,7 +337,9 @@ const PricingCard: React.FC<{
     id: number;
   }>;
   frequency?: string;
-}> = ({ prices, frequency = 'month' }) => (
+  setData?: any;
+  activeTab?: string;
+}> = ({ prices, frequency = 'month', setData, activeTab }) => (
   <div
     className={`space-y-8 px-4 sm:gap-6 md:gap-3 lg:grid ${`lg:grid-cols-${prices.length}`} lg:space-y-0 xl:gap-10`}
   >
@@ -373,19 +375,25 @@ const PricingCard: React.FC<{
             </li>
           ))}
         </ul>
-        <a
-          href="#"
+        <button
+          onClick={() => {
+            setData(`${activeTab} / ${p.title}`);
+          }}
           className="rounded-lg bg-white px-5 py-2.5 text-center text-sm font-medium text-primary-900 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 dark:text-white dark:focus:ring-primary-900"
         >
           Souscrire
-        </a>
+        </button>
       </div>
     ))}
   </div>
 );
 
-const Pricing = () => {
+const Pricing: React.FC<{
+  setSubscriptionPaquet: any;
+  setOpenModal: any;
+}> = ({ setSubscriptionPaquet, setOpenModal }) => {
   const [activeFrequency, setActiveFrequency] = React.useState<string>('moi');
+  const [activeTab, setActiveTab] = React.useState<string>('JAMAA A');
   return (
     <div className="bg-primary-900 pt-[15px]" id="pricing">
       <h1 className="mb-4 mt-5 text-center text-2xl font-bold text-white">
@@ -441,6 +449,9 @@ const Pricing = () => {
             <Tabs
               aria-label="Pills"
               style="pills"
+              onActiveTabChange={(tab) => {
+                setActiveTab(['JAMAA A', 'JAMAA B', 'AFYA', 'VIP'][tab] || '');
+              }}
               theme={{
                 tablist: {
                   tabitem: {
@@ -474,6 +485,11 @@ const Pricing = () => {
                 <PricingCard
                   prices={pricesList[0]?.prices || []}
                   frequency={activeFrequency}
+                  setData={(data: string) => {
+                    setSubscriptionPaquet(data);
+                    setOpenModal(true);
+                  }}
+                  activeTab={activeTab}
                 />
               </Tabs.Item>
               <Tabs.Item
@@ -491,6 +507,11 @@ const Pricing = () => {
                 <PricingCard
                   prices={pricesList[1]?.prices || []}
                   frequency={activeFrequency}
+                  setData={(data: string) => {
+                    setSubscriptionPaquet(data);
+                    setOpenModal(true);
+                  }}
+                  activeTab={activeTab}
                 />
               </Tabs.Item>
               <Tabs.Item
@@ -508,6 +529,11 @@ const Pricing = () => {
                 <PricingCard
                   prices={pricesList[2]?.prices || []}
                   frequency={activeFrequency}
+                  setData={(data: string) => {
+                    setSubscriptionPaquet(data);
+                    setOpenModal(true);
+                  }}
+                  activeTab={activeTab}
                 />
               </Tabs.Item>
               <Tabs.Item
@@ -525,6 +551,11 @@ const Pricing = () => {
                 <PricingCard
                   prices={pricesList[3]?.prices || []}
                   frequency={activeFrequency}
+                  setData={(data: string) => {
+                    setSubscriptionPaquet(data);
+                    setOpenModal(true);
+                  }}
+                  activeTab={activeTab}
                 />
               </Tabs.Item>
             </Tabs>
