@@ -341,7 +341,7 @@ const PricingCard: React.FC<{
   activeTab?: string;
 }> = ({ prices, frequency = 'month', setData, activeTab }) => (
   <div
-    className={`space-y-8 px-4 sm:gap-6 md:gap-3 lg:grid ${`lg:grid-cols-${prices.length}`} lg:space-y-0 xl:gap-10`}
+    className={`space-y-8 px-4 sm:gap-6 md:grid md:grid-cols-2 lg:grid ${`lg:grid-cols-${prices.length}`} md:space-y-0 lg:space-y-0 xl:gap-10`}
   >
     {prices.map((p) => (
       <div

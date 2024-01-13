@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = () => (
             </Button>
           </div>
         </div>
-        <div className="hidden items-end justify-end lg:block">
+        <div className="hidden items-end justify-end md:block lg:block">
           <Carousel className="ml-auto h-[400px] w-[500px]" slideInterval={500}>
             <div className="flex flex-col items-end justify-end">
               <img
@@ -50,7 +50,7 @@ const Hero: React.FC<HeroProps> = () => (
               <img
                 src="/assets/images/home/img2.jpg"
                 alt="Hero"
-                className="mt-[-40px] rounded-md md:w-[27px]  lg:w-[320px]"
+                className="mt-[-40px] rounded-md md:w-[270px]  lg:w-[320px]"
               />
               <div className="absolute top-[40px] flex flex-col items-center justify-center">
                 <div className="mb-[6px] h-[8px] w-[80px] rotate-[-5deg] bg-primary-300" />
