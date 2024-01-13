@@ -60,11 +60,6 @@ export const services = [
       'Via un téléphone ou une tablette ou un ordinateur, le client peut s’il désire bénéficier des certains services à distance (en ligne) via un progiciel spécial de clinique Mobile de Médecine de Famille.',
     subServices: [
       {
-        name: 'Téléconsultation',
-        description:
-          'être consulté en ligne en appel vidéo ou vocal via le progiciel par des médecins spécialistes de Goma, des autres villes Congolaises et même de l’extérieur du pays. Cette consultation sera sanctionnée par une prescription médicale (ordonnance: any, bons: any d: any’examen: any, etc: any.) ; Si la téléconsultation est initié par le prestatire CRESAMEF, le client ne paiera aucun frais supplémentaire ; en revanche si la téléconsultation est sollicité par le client, ce dernier prendra en charge à 50% les frais supplémentaires y relatifs',
-      },
-      {
         name: 'Télésuivi',
         description:
           'Le client sera suivi à distance qu’il soit à Goma ou ailleurs et ce même s’il n’a sollicité aucun service. Ce suivi est systématique pour ce paquet.',
@@ -73,6 +68,11 @@ export const services = [
         name: 'Télé conseil/expertise',
         description:
           'Le client bénéficiera à volonté des services promotionnels et préventifs à distance.',
+      },
+      {
+        name: 'Téléconsultation',
+        description:
+          'être consulté en ligne en appel vidéo ou vocal via le progiciel par des médecins spécialistes de Goma, des autres villes Congolaises et même de l’extérieur du pays. Cette consultation sera sanctionnée par une prescription médicale (ordonnance: any, bons: any d: any’examen: any, etc: any.) ; Si la téléconsultation est initié par le prestatire CRESAMEF, le client ne paiera aucun frais supplémentaire ; en revanche si la téléconsultation est sollicité par le client, ce dernier prendra en charge à 50% les frais supplémentaires y relatifs',
       },
     ],
   },
