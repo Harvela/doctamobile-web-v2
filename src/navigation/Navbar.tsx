@@ -53,7 +53,7 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
             onClick={() => {
               if (token) {
                 window.location.href =
-                  process.env.APP_LINK || 'https://app.doctabyte.com';
+                  process.env.APP_LINK || 'https://app.doktamobile.com';
               } else {
                 setOpenModal?.(true);
               }
