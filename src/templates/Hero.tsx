@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = () => (
             pour vous et <span className="text-primary-900">votre famille</span>
           </h1>
           <h2 className="mt-[20px] text-sm text-[#666] lg:text-[17px]">
-            Avec doctamobile, ayez accès à une équipe permanente de medecins ( A
+            Avec doctamobile, ayez accès à une équipe permanente de medecins ( à
             domicile, au travail, ou à distance), infirmier et autres
             spécialiste de santé pour toute votre famille.
           </h2>
