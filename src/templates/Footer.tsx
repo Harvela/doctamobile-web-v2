@@ -8,9 +8,14 @@ const links = {
     { title: 'Nos paquets', link: 'pricing' },
   ],
   grid2: [
-    { title: 'Conditions de services', link: '/page-terms' },
-    { title: 'Politique de confidentialité', link: '/page-privacy' },
-    { title: 'Documentation', link: '/documentation' },
+    {
+      title: 'Termes de reference',
+      link: 'https://stream-motion-ff1.notion.site/Fr-6b52009fc3d04537b3014022d5550778?pvs=4',
+    },
+    {
+      title: "Conditions d'utilisation",
+      link: 'https://stream-motion-ff1.notion.site/Conditions-d-Utilisation-des-Donn-es-e25fa4c53deb4b7bac97438012623790?pvs=4',
+    },
   ],
 };
 

@@ -68,7 +68,7 @@ const Pricing: React.FC<{
   setSubscriptionPaquet: any;
   setOpenModal: any;
 }> = ({ setSubscriptionPaquet, setOpenModal }) => {
-  const [activeFrequency, setActiveFrequency] = React.useState<string>('moi');
+  const [activeFrequency, setActiveFrequency] = React.useState<string>('month');
   const [activeTab, setActiveTab] = React.useState<string>('JAMAA A');
   return (
     <div className="bg-primary-900 pt-[15px]" id="pricing">

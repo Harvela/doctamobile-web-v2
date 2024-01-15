@@ -17,7 +17,7 @@ const Counter = () => {
     },
     {
       title: 'Patients',
-      end: 1100,
+      end: 10,
       postFix: '+',
       desc: 'Patients enregistrés',
     },

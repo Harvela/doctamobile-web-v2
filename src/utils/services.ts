@@ -3,7 +3,7 @@ export const services = [
     name: 'Consultation sur demande',
     color: '#F7FBFF',
     description:
-      'De façon illimitée, le Chef de ménage ou son délégué a le droit de réserver/demander une consultation/un rendez-vous à chaque fois qu’un membre du ménage a un problème de santé, et ce, selon les termes du contrat d’abonnement.',
+      'le Chef de ménage ou son délégué a le droit de réserver/demander une consultation/un rendez-vous à chaque fois qu’un membre du ménage a un problème de santé, et ce, selon les termes du contrat d’abonnement.',
   },
   {
     name: 'Visite à domicile de suivi',
@@ -21,7 +21,7 @@ export const services = [
     name: 'Services Promotion & prévention',
     color: '#FFF5F5',
     description:
-      'Les clients ayant souscrit au présent paquet ont droit aux services promotionnels et préventifs suivants',
+      'Les clients ont droit aux services promotionnels et préventifs suivants',
     subServices: [
       {
         name: 'Nutrition',
@@ -62,7 +62,7 @@ export const services = [
       {
         name: 'Télésuivi',
         description:
-          'Le client sera suivi à distance qu’il soit à Goma ou ailleurs et ce même s’il n’a sollicité aucun service. Ce suivi est systématique pour ce paquet.',
+          'Le client sera suivi à distance qu’il soit à Goma ou ailleurs et ce même s’il n’a sollicité aucun service.',
       },
       {
         name: 'Télé conseil/expertise',
@@ -72,15 +72,14 @@ export const services = [
       {
         name: 'Téléconsultation',
         description:
-          'être consulté en ligne en appel vidéo ou vocal via le progiciel par des médecins spécialistes de Goma, des autres villes Congolaises et même de l’extérieur du pays. Cette consultation sera sanctionnée par une prescription médicale (ordonnance: any, bons: any d: any’examen: any, etc: any.) ; Si la téléconsultation est initié par le prestatire CRESAMEF, le client ne paiera aucun frais supplémentaire ; en revanche si la téléconsultation est sollicité par le client, ce dernier prendra en charge à 50% les frais supplémentaires y relatifs',
+          'être consulté en ligne en appel vidéo ou vocal via le progiciel par des médecins spécialistes de Goma, des autres villes Congolaises et même de l’extérieur du pays. Cette consultation sera sanctionnée par une prescription médicale (ordonnance: any, bons: any d: any’examen: any, etc: any.)',
       },
     ],
   },
   {
     name: 'Check-up santé (bilan de santé)',
     color: '#FDECEA',
-    description:
-      'Les clients ayant souscrit au présent paquet ont droit aux bilans de santé suivants :',
+    description: 'Les clients ont droit aux bilans de santé suivants :',
     subServices: [
       {
         name: 'Bilan annuel',
@@ -160,37 +159,37 @@ export const services = [
     name: 'Ambulance',
     color: '#FEF4E7',
     description:
-      "Les clients ayant souscrit au présent paquet ont droit à un nombre d'évacuations gratuites par an à bord d'une ambulance pour être évacué à l'un de nos hôpitaux partenaires en ville de Goma ou vers l'aéroport. Au-delà de ce quota, le client va devoir prendre en charge les frais de l'ambulance à 50%.",
+      "Les clients ont droit à un nombre d'évacuations gratuites par an à bord d'une ambulance pour être évacué à l'un de nos hôpitaux partenaires en ville de Goma ou vers l'aéroport.",
   },
   {
     name: 'Prélèvement à domicile',
     color: '#F7FFFA',
     description:
-      "Les clients ayant souscrit au présent paquet auront droit au prélèvement à domicile s'ils le souhaitent. Le coût du déplacement du technicien sera à la charge de la CMMF à un pourcentage dependant du paquet d'abonnement. Pour ce qui est des examens, la CMMF supportera le coût des examens de laboratoire repris sur la liste de Bilan circonstanciel du présent paquet.",
+      "Les clients auront droit au prélèvement à domicile s'ils le souhaitent. Le coût du déplacement du technicien sera à la charge de la CMMF à un pourcentage dependant du paquet d'abonnement.",
   },
   {
     name: 'Livraison des médicaments à domicile',
     color: '#FFF5F5',
     description:
-      "Les clients ayant souscrit au présent paquet se verront livrer les médicaments à domicile. Il convient de noter que les coûts relatifs à l'achat des médicaments sont à la charge du Client. La CMMF prend uniquement en charge les frais mentionné sur le paquet d'abonnement. Ainsi la livraison à domicile sera faite si et seulement si le client consent de payer à la CMMF l'équivalent du coût de l'achat du (des) médicament (s).",
+      "Les clients se verront livrer les médicaments à domicile. Il convient de noter que les coûts relatifs à l'achat des médicaments sont à la charge du Client. ",
   },
   {
     name: 'Hospitalisation à domicile',
     color: '#EAE8F1',
     description:
-      "Pour les clients ayant souscrit au présent paquet, la CMMF fournira un(e) infirmier(e) qualifié(e) qui assurera la surveillance et les soins infirmier sous la supervision directe des médecins spécialistes de la CMMF. Le patient aura droit à un tour salle une à plusieurs fois par jour selon les cas. Néanmoins, les médicaments et les consommables seront à la charge du client à 100% ; La CMMF supportera uniquement le coût de la mobilisation du personnel et de services à 100%. Pour les bilans de laboratoire et imagerie médicale seront à 100% à la charge du patient. Ce service inclut essentiellement les soins gériatriques (soins pour personnes âgées/vieillards) et palliatifs (soins de fin de vie pour patient en stade avancé d'une maladie incurable).",
+      "Pour les clients, la CMMF fournira un(e) infirmier(e) qualifié(e) qui assurera la surveillance et les soins infirmier sous la supervision directe des médecins spécialistes de la CMMF. Le patient aura droit à un tour salle une à plusieurs fois par jour selon les cas. Néanmoins, les médicaments et les consommables seront à la charge du client à 100% ; La CMMF supportera uniquement le coût de la mobilisation du personnel et de services à 100%. Pour les bilans de laboratoire et imagerie médicale seront à 100% à la charge du patient. Ce service inclut essentiellement les soins gériatriques (soins pour personnes âgées/vieillards) et palliatifs (soins de fin de vie pour patient en stade avancé d'une maladie incurable).",
   },
   {
     name: 'Consultation à domicile (RDVIC) en dehors de Goma',
     color: '#FDECEA',
     description:
-      "Les clients ayant souscrit au présent paquet peuvent bénéficier d'une consultation à domicile ou dans leur hôtel à Kinshasa, à condition de payer les frais de déplacement du médecin, soit 5 $ (au taux du jour). La CMMF paiera les honoraires du médecin une seule fois par mois.",
+      "Les clientspeuvent bénéficier d'une consultation à domicile ou dans leur hôtel à Kinshasa, à condition de payer les frais de déplacement du médecin, soit 5 $ (au taux du jour). La CMMF paiera les honoraires du médecin une seule fois par mois.",
   },
   {
     name: 'Facilitation de tourisme médical & évacuation à l’étranger',
     color: '#F7FBFF',
     description:
-      "Si un membre d'un ménage ayant souscrit au présent paquet désire aller se faire soigner ou examiner à l'étranger (Burundi, Inde, ...), la CMMF lui facilitera la prise de contact et l'aidera à obtenir tous les renseignements nécessaires y relatifs. Cependant, il payera les frais de commission avec une réduction de 15%. Le coût relatif au voyage et aux soins à l'étranger sera à la charge du Client lui-même.",
+      "Si un membre d'un ménage  désire aller se faire soigner ou examiner à l'étranger (Burundi, Inde, ...), la CMMF lui facilitera la prise de contact et l'aidera à obtenir tous les renseignements nécessaires y relatifs. Cependant, il payera les frais de commission avec une réduction de 15%. Le coût relatif au voyage et aux soins à l'étranger sera à la charge du Client lui-même.",
   },
   {
     name: 'Accompagnement médical',

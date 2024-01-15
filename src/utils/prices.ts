@@ -67,7 +67,7 @@ export const pricesList = [
         title: '1 - 4 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$0',
-        priceList: { month: 10, trimestre: 29, semestre: 57, year: 108 },
+        priceList: { month: 10, trimestre: 29, semestre: 57, annee: 108 },
         list: [
           'Consultation sur demande ',
           'Visite à Domicile de suivi ',
@@ -81,7 +81,7 @@ export const pricesList = [
         title: '5 - 8 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$0',
-        priceList: { month: 20, trimestre: 58, semestre: 114, year: 216 },
+        priceList: { month: 20, trimestre: 58, semestre: 114, annee: 216 },
         list: [
           'Consultation sur demande ',
           'Visite à Domicile de suivi ',
@@ -95,7 +95,7 @@ export const pricesList = [
         title: '9 - 12 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$0',
-        priceList: { month: 30, trimestre: 87, semestre: 171, year: 324 },
+        priceList: { month: 30, trimestre: 87, semestre: 171, annee: 324 },
         list: [
           'Consultation sur demande ',
           'Visite à Domicile de suivi ',
@@ -109,7 +109,7 @@ export const pricesList = [
         title: '13 - 15 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$0',
-        priceList: { month: 40, trimestre: 116, semestre: 228, year: 432 },
+        priceList: { month: 40, trimestre: 116, semestre: 228, annee: 432 },
         list: [
           'Consultation sur demande ',
           'Visite à Domicile de suivi ',
