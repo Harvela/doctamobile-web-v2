@@ -19,7 +19,13 @@ const CustomDropdownIndicator = () => null;
 
 const Service: React.FC = () => {
   const [selectedService, setSelectedService] = useState<ServiceOption | null>(
-    null,
+    services[0]
+      ? {
+          name: services[0].name,
+          color: services[0].color,
+          description: services[0].description,
+        }
+      : null,
   );
 
   const handleSelectChange = (selectedOption: SingleValue<ServiceOption>) => {
@@ -32,12 +38,15 @@ const Service: React.FC = () => {
   };
 
   return (
-    <div className="bg-white px-4 py-[60px] lg:px-[100px]" id="services">
+    <div
+      className="bg-white px-4 md:py-[50px] lg:px-[100px] lg:py-[30px]"
+      id="services"
+    >
       <h1 className="mb-8 mt-5 text-lg font-bold text-blue lg:text-2xl">
         Nos services
       </h1>
       <div className="flex w-full flex-col gap-8 bg-primary-200 p-4 lg:flex-row lg:p-8">
-        <div className="h-[70vh] w-full rounded-xl bg-white p-4 lg:w-[30%] lg:p-8">
+        <div className="w-full rounded-xl bg-white p-4 lg:w-[30%] lg:p-8">
           <ReactSelect
             menuIsOpen
             options={services.map(
@@ -69,7 +78,7 @@ const Service: React.FC = () => {
             }}
           />
         </div>
-        <div className="w-full grow rounded-xl bg-white p-8 shadow-sm lg:h-[70vh] lg:w-[65%]">
+        <div className="w-full grow rounded-xl bg-white p-8 shadow-sm lg:h-[400px] lg:w-[65%]">
           {selectedService && (
             <>
               <h2 className="mb-8 text-lg font-bold text-blue">

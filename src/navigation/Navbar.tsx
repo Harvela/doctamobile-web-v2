@@ -80,7 +80,7 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
             spy
             offset={-100}
           >
-            Comment ca marche?
+            Comment ça marche?
           </Link>
           <Link
             activeClass="text-primary-900 font-bold"
