@@ -28,7 +28,7 @@ const RegisterFamily: React.FC<RegisterFamilyProps> = ({
     setLoading(true);
     try {
       const response = await fetch(
-        'http://localhost:3001/api/subscription-requests',
+        'https://backend.doctabyte.com/api/subscription-requests',
         {
           method: 'POST',
           headers: {

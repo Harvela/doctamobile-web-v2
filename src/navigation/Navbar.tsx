@@ -27,11 +27,10 @@ const customTheme: CustomFlowbiteTheme = {
   },
 };
 
-const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
+const NavbarGlobal: React.FC<NavbarProps> = () => {
   const [token, setToken] = React.useState<string | null>(null);
   useEffect(() => {
     const tokend = cookies.get('token');
-    console.log(tokend);
     setToken(tokend);
   }, []);
   return (
@@ -44,22 +43,14 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
           <img
             src="/fullLogo.png"
             className="h-8 lg:mr-3 lg:h-16"
-            alt="DoctaMobile Logo"
+            alt="Docta Mobile Logo"
           />
         </Navbar.Brand>
         <div className="flex gap-8 md:order-2">
-          <button
-            className="rounded-lg bg-primary-900 px-4 py-2 text-sm text-white"
-            onClick={() => {
-              if (token) {
-                window.location.href =
-                  process.env.APP_LINK || 'https://app.doktamobile.com';
-              } else {
-                setOpenModal?.(true);
-              }
-            }}
-          >
-            {token ? 'Tableau de bord' : 'Prendre rendez-vous'}
+          <button className="rounded-lg bg-primary-900 px-4 py-2 text-sm text-white">
+            <a href="https://app.doktamobile.com" target="_blank">
+              {token ? 'Tableau de bord' : 'Prendre rendez-vous'}
+            </a>
           </button>
           <Navbar.Toggle />
         </div>
