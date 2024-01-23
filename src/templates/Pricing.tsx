@@ -75,7 +75,7 @@ const Pricing: React.FC<{
       <h1 className="mb-4 mt-5 text-center text-2xl font-bold text-white">
         Nos paquets de souscription
       </h1>
-      <div className="align-center mx-auto flex items-center justify-center gap-5 text-white">
+      <div className="align-center mx-auto flex flex-wrap items-center justify-center gap-5 text-white">
         <p className="mr-4">Afficher les prix par</p>
         <div className="h-[25px] w-[1px] bg-white"></div>
         <Button

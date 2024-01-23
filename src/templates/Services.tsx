@@ -46,7 +46,7 @@ const Service: React.FC = () => {
         Nos services
       </h1>
       <div className="flex w-full flex-col gap-8 bg-primary-200 p-4 lg:flex-row lg:p-8">
-        <div className="w-full rounded-xl bg-white p-4 lg:w-[30%] lg:p-8">
+        <div className="h-[50vh] w-full rounded-xl bg-white p-4 lg:h-[70vh] lg:w-[30%] lg:p-8">
           <ReactSelect
             menuIsOpen
             options={services.map(
@@ -78,7 +78,7 @@ const Service: React.FC = () => {
             }}
           />
         </div>
-        <div className="w-full grow rounded-xl bg-white p-8 shadow-sm lg:h-[400px] lg:w-[65%]">
+        <div className="h-[50vh] w-full grow rounded-xl bg-white p-8 shadow-sm lg:h-[70vh] lg:w-[65%]">
           {selectedService && (
             <>
               <h2 className="mb-8 text-lg font-bold text-blue">

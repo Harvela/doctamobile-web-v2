@@ -16,16 +16,24 @@ const Hero: React.FC<HeroProps> = () => (
         className="grid h-[80vh] items-center px-4 md:mt-[100px] md:grid-cols-2 lg:mt-[100px] lg:px-[100px]"
         id="home"
       >
-        <div className="my-auto pr-10">
-          <h1 className="text-lg font-bold text-blue lg:text-[30px]">
-            Une equipe d’
-            <span className="text-secondary-900">Expert en santé</span> juste
-            pour vous et <span className="text-primary-900">votre famille</span>
+        <div className="pr-10">
+          <span className="rounded-[15px] bg-primary-900/10 px-2 py-1 text-[10px] font-semibold text-primary-900">
+            L’hôpital chez vous à la maison
+          </span>
+          <h1 className="mt-4 text-lg font-bold text-blue lg:text-[22px]">
+            Une équipe mobile des spécialistes en
+            <span className="ml-2 text-secondary-900">
+              Médecine de Famille
+            </span>{' '}
+            juste pour vous et{' '}
+            <span className="text-primary-900">votre famille</span>
           </h1>
-          <h2 className="mt-[20px] text-sm text-[#666] lg:text-[17px]">
-            Avec doctamobile, ayez accès à une équipe permanente de medecins ( à
-            domicile, au travail, ou à distance), infirmier et autres
-            spécialiste de santé pour toute votre famille.
+          <h2 className="mt-[20px] text-sm text-[#666] lg:text-[12px]">
+            Avec Doktamobile, accédez à une équipe permanente de médecins de
+            famille de la Clinique mobile de Médecine de Famille (CMMF) de
+            CRESAMEF CONSULTING, et d’autres spécialistes pouvant vous consulter
+            quand et où vous voulez (à votre domicile, à l’hôtel, à distance, au
+            travail, etc.).
           </h2>
           <div className="mt-[20px] flex flex-col gap-5 lg:flex-row">
             <Button color="primary" className="mt-4 bg-primary-900 text-white">

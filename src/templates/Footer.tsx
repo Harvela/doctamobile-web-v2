@@ -4,7 +4,7 @@ const links = {
   grid1: [
     { title: 'Accueil', link: 'home' },
     { title: 'Comment ca marche?', link: 'how-it-work' },
-    { title: 'Nos ervives', link: 'services' },
+    { title: 'Nos servives', link: 'services' },
     { title: 'Nos paquets', link: 'pricing' },
   ],
   grid2: [
@@ -112,7 +112,11 @@ const Footer = () => (
             <ul className="text-gray-600 dark:text-gray-400">
               {links.grid2.map((grid, key) => (
                 <li key={key} className="mb-4">
-                  <a href={grid.link} className="hover:underline">
+                  <a
+                    href={grid.link}
+                    target="_blank"
+                    className="hover:underline"
+                  >
                     {grid.title}
                   </a>
                 </li>

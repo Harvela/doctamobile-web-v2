@@ -15,6 +15,7 @@ import { Service } from './Services';
 const Base = () => {
   const [openModal, setOpenModal] = useState(false);
   const [subscriptionPaquet, setSubscriptionPaquet] = useState('' as string);
+
   return (
     <div className="text-gray-600 antialiased">
       <Meta title={AppConfig.title} description={AppConfig.description} />

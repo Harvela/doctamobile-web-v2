@@ -56,11 +56,11 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
         </div>
         <Navbar.Collapse>
           <Link
-            offset={-100}
             activeClass="text-primary-900 font-bold"
             to="home"
             smooth
             spy
+            offset={-100}
           >
             Accueil
           </Link>
@@ -78,7 +78,6 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
             to="services"
             smooth
             spy
-            offset={-100}
           >
             Nos services
           </Link>
