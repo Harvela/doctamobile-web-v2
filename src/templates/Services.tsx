@@ -1,6 +1,5 @@
-import { useState } from 'react';
-import type { SingleValue } from 'react-select';
-import ReactSelect from 'react-select';
+import dynamic from 'next/dynamic';
+import { useEffect, useState } from 'react';
 
 import { services } from '@/utils/services';
 
@@ -15,6 +14,9 @@ interface SubService {
   description: string;
 }
 
+const DynamicReactSelect = dynamic(() => import('react-select'), {
+  ssr: false,
+});
 const CustomDropdownIndicator = () => null;
 
 const Service: React.FC = () => {
@@ -27,14 +29,31 @@ const Service: React.FC = () => {
         }
       : null,
   );
+  const [isMenuOpen, setIsMenuOpen] = useState(
+    typeof window !== 'undefined' ? window.innerWidth >= 900 : false,
+  );
 
-  const handleSelectChange = (selectedOption: SingleValue<ServiceOption>) => {
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMenuOpen(window.innerWidth >= 900);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const handleSelectChange = (selectedOption: any) => {
     setSelectedService(selectedOption as ServiceOption | null);
   };
 
   const getSubServices = (serviceName: string): SubService[] | undefined => {
     const service = services.find((s) => s.name === serviceName);
     return service?.subServices;
+  };
+
+  const handleInputChange = (inputValue: string) => {
+    setIsMenuOpen(inputValue.trim().length > 0);
   };
 
   return (
@@ -46,9 +65,9 @@ const Service: React.FC = () => {
         Nos services
       </h1>
       <div className="flex w-full flex-col gap-8 bg-primary-200 p-4 lg:flex-row lg:p-8">
-        <div className="h-[50vh] w-full rounded-xl bg-white p-4 lg:h-[70vh] lg:w-[30%] lg:p-8">
-          <ReactSelect
-            menuIsOpen
+        <div className="z-50 w-full rounded-xl bg-white p-4 lg:h-[70vh] lg:w-[30%] lg:p-8">
+          <DynamicReactSelect
+            menuIsOpen={isMenuOpen}
             options={services.map(
               (service) =>
                 ({
@@ -60,25 +79,29 @@ const Service: React.FC = () => {
                 }) as ServiceOption,
             )}
             onChange={handleSelectChange}
+            onInputChange={handleInputChange}
             placeholder="Rechercher un service, specialite"
             unstyled
             components={{ DropdownIndicator: CustomDropdownIndicator }}
             className="border-b-1 border border-x-0 border-t-0 border-[#99A0B4] text-sm font-semibold text-blue"
             styles={{
-              option: (base, { data }) => ({
-                ...base,
-                backgroundColor: data.color,
-                color: '#1278FB',
-                fontWeight: '600',
-                fontSize: '14px',
-                padding: '8px',
-                borderRadius: '8px',
-                marginTop: '20px',
-              }),
+              option: (base, { data }) => {
+                const optionData = data as ServiceOption; // Explicitly specify the type
+                return {
+                  ...base,
+                  backgroundColor: optionData.color,
+                  color: '#1278FB',
+                  fontWeight: '600',
+                  fontSize: '14px',
+                  padding: '8px',
+                  borderRadius: '8px',
+                  marginTop: '20px',
+                };
+              },
             }}
           />
         </div>
-        <div className="h-[50vh] w-full grow rounded-xl bg-white p-8 shadow-sm lg:h-[70vh] lg:w-[65%]">
+        <div className="w-full grow rounded-xl bg-white p-8 shadow-sm lg:h-[70vh] lg:w-[65%]">
           {selectedService && (
             <>
               <h2 className="mb-8 text-lg font-bold text-blue">

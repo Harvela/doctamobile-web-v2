@@ -11,16 +11,16 @@ export type HeroProps = {
 
 const Hero: React.FC<HeroProps> = () => (
   <Background color="">
-    <Section yPadding="py-6">
+    <Section yPadding="lg:py-6">
       <div
-        className="grid h-[80vh] items-center px-4 md:mt-[100px] md:grid-cols-2 lg:mt-[100px] lg:px-[100px]"
+        className="mt-[60px] grid h-[50vh] items-center px-4 md:mt-[100px] md:grid-cols-2 lg:mt-[100px] lg:h-[80vh] lg:px-[100px]"
         id="home"
       >
         <div className="pr-10">
-          <span className="rounded-[15px] bg-primary-900/10 px-2 py-1 text-[10px] font-semibold text-primary-900">
+          <span className="rounded-[15px] bg-primary-900/10 px-2 py-1 text-[6px] font-semibold text-primary-900 lg:text-[10px]">
             L’hôpital chez vous à la maison
           </span>
-          <h1 className="mt-4 text-lg font-bold text-blue lg:text-[22px]">
+          <h1 className="mt-4 text-[16px] font-bold text-blue lg:text-[22px]">
             Une équipe mobile des spécialistes en
             <span className="ml-2 text-secondary-900">
               Médecine de Famille
@@ -28,14 +28,14 @@ const Hero: React.FC<HeroProps> = () => (
             juste pour vous et{' '}
             <span className="text-primary-900">votre famille</span>
           </h1>
-          <h2 className="mt-[20px] text-sm text-[#666] lg:text-[12px]">
+          <h2 className="mt-[20px] text-[10px] text-[#666] lg:text-[12px]">
             Avec Doktamobile, accédez à une équipe permanente de médecins de
             famille de la Clinique mobile de Médecine de Famille (CMMF) de
             CRESAMEF CONSULTING, et d’autres spécialistes pouvant vous consulter
             quand et où vous voulez (à votre domicile, à l’hôtel, à distance, au
             travail, etc.).
           </h2>
-          <div className="mt-[20px] flex flex-col gap-5 lg:flex-row">
+          <div className="mt-[20px] flex flex-col gap-2 lg:flex-row lg:gap-5">
             <Button color="primary" className="mt-4 bg-primary-900 text-white">
               <Link href="/about">Nous Contacter</Link>
             </Button>

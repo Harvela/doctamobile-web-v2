@@ -72,7 +72,7 @@ const Pricing: React.FC<{
   const [activeTab, setActiveTab] = React.useState<string>('JAMAA A');
   return (
     <div className="bg-primary-900 pt-[15px]" id="pricing">
-      <h1 className="mb-4 mt-5 text-center text-2xl font-bold text-white">
+      <h1 className="mb-4 mt-5 text-center text-lg font-bold text-white lg:text-2xl">
         Nos paquets de souscription
       </h1>
       <div className="align-center mx-auto flex flex-wrap items-center justify-center gap-5 text-white">
