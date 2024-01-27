@@ -54,7 +54,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
         <div className="flex gap-8 md:order-2">
           <button className="rounded-lg bg-primary-900 px-4 py-2 text-sm text-white">
             <a href="https://app.doktamobile.com" target="_blank">
-              {token ? 'Tableau de bord' : 'Prendre rendez-vous'}
+              {token ? 'Tableau de bord' : 'Nous contacter'}
             </a>
           </button>
           <Navbar.Toggle />
@@ -65,7 +65,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
             to="home"
             smooth
             spy
-            offset={-100}
+            offset={-200}
           >
             Accueil
           </Link>
