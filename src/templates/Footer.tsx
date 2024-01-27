@@ -4,7 +4,7 @@ const links = {
   grid1: [
     { title: 'Accueil', link: 'home' },
     { title: 'Comment ca marche?', link: 'how-it-work' },
-    { title: 'Nos ervives', link: 'services' },
+    { title: 'Nos servives', link: 'services' },
     { title: 'Nos paquets', link: 'pricing' },
   ],
   grid2: [
@@ -16,6 +16,10 @@ const links = {
       title: "Conditions d'utilisation",
       link: 'https://stream-motion-ff1.notion.site/Conditions-d-Utilisation-des-Donn-es-e25fa4c53deb4b7bac97438012623790?pvs=4',
     },
+    // {
+    //   title: "Contrat d'abonnement",
+    //   link: 'https://stream-motion-ff1.notion.site/Conditions-d-Utilisation-des-Donn-es-e25fa4c53deb4b7bac97438012623790?pvs=4',
+    // },
   ],
 };
 
@@ -31,7 +35,7 @@ const Footer = () => (
               alt="FlowBite Logo"
             />
           </a>
-          <p className="mt-4">La plateforme medicale par excellence</p>
+          <p className="mt-4">L’hôpital chez vous à la maison</p>
 
           <div className="mt-8 flex flex-row items-center gap-8">
             <a
@@ -112,7 +116,11 @@ const Footer = () => (
             <ul className="text-gray-600 dark:text-gray-400">
               {links.grid2.map((grid, key) => (
                 <li key={key} className="mb-4">
-                  <a href={grid.link} className="hover:underline">
+                  <a
+                    href={grid.link}
+                    target="_blank"
+                    className="hover:underline"
+                  >
                     {grid.title}
                   </a>
                 </li>

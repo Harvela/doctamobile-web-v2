@@ -1,27 +1,27 @@
 export const services = [
   {
-    name: 'Consultation sur demande',
+    name: 'Consultation sur demande: Rendez-vous initié par le Client (RDVIC)',
     color: '#F7FBFF',
     description:
-      'le Chef de ménage ou son délégué a le droit de réserver/demander une consultation/un rendez-vous à chaque fois qu’un membre du ménage a un problème de santé, et ce, selon les termes du contrat d’abonnement.',
+      ' Il s’agit des rendez-vous de consultation (curative, préventive) sur demande du client à chaque fois qu’il a besoin d’être vu. En général le client abonné fera les réservations des rendez-vous via l’application doktamobile via un lien qui lui sera communiqué via une brochure qui lui sera remise au moment que sa carte d’abonnement. Le client n’est pas à l’aise avec l’usage du site internet, pourra passer par d’autre canaux qui lui sont familiers (appel téléphonique direct, les réseaux sociaux, mails, SMS, etc). Le cas échéant, le secrétariat de la CMMF remplira le formulaire de demande de rendez-vous selon les procédures de la CMMF (cfr manuel des procédures).',
   },
   {
-    name: 'Visite à domicile de suivi',
+    name: 'Visite à domicile de suivi: Rendez-vous initié par le prestataire (RDVIP)',
     color: '#FEF4E7',
     description:
-      'Selon l’appréciation du médecin et la présentation de la situation du patient, le médecin traitant qui a vu le patient en RDVIC peut initier en collaboration avec son patient une visite à domicile dans le cadre de suivi.',
+      'Le RDVIC est  une visite à domicile initiée par le médecin traitant qui a vu le patient en collaboration ce dernier dans le cadre de suivi conformément aux procédures de CRESAMEF.',
   },
   {
     name: 'Consultation Super Spéciale & spécifique',
     color: '#F7FFFA',
     description:
-      'En plus des médecins spécialistes s’occupant de son bien être durant tout le temps de son abonnement, le patient aura le privilège d’être consulté et prise en charge par des super spécialité et soins spéciaux en fonction de son problème de santé : Cardiologue, diabétologue, neurologue, ophtalmologue, ORListe, Dentiste, Kinésithérapeute, psychologue, psychiatre etc..)',
+      'En plus des médecins spécialistes en médecine de famille s’occupant de son bien être durant tout le temps de son abonnement, le patient aura le privilège d’être consulté et prise en charge par des super spécialité et soins spéciaux en fonction de son problème de santé : Cardiologue, diabétologue, neurologue, ophtalmologue, ORListe, Odontologue, Kinésithérapeute, psychologue, psychiatre etc..)',
   },
   {
-    name: 'Services Promotion & prévention',
+    name: 'Promotion & Prévention',
     color: '#FFF5F5',
     description:
-      'Les clients ont droit aux services promotionnels et préventifs suivants',
+      'Les clients ayant souscrit au présent paquet ont droit aux services promotionnels et préventifs suivants :',
     subServices: [
       {
         name: 'Nutrition',
@@ -44,20 +44,25 @@ export const services = [
       },
       {
         name: 'Kinésithérapie préventive',
-        description: 'Kinésithérapie préventive',
+        description: '',
       },
       {
         name: 'Sécurité en milieu domestique, scolaire et professionnel',
-        description:
-          'Sécurité en milieu domestique, scolaire et professionnel.',
+        description: '',
       },
     ],
+  },
+  {
+    name: 'Visite à domicile (VAD) systématique',
+    color: '#F7FFFA',
+    description:
+      'Il s’agit d’un rendez-vous mensuel systématique (RVMS) dans le but de suivi de proximité ne faisant à aucune demande ou consultation. Que le ménage ait un problème de santé ou pas le médecin passe une fois le mois.',
   },
   {
     name: 'Télémédecine',
     color: '#EAE8F1',
     description:
-      'Via un téléphone ou une tablette ou un ordinateur, le client peut s’il désire bénéficier des certains services à distance (en ligne) via un progiciel spécial de clinique Mobile de Médecine de Famille.',
+      'Via un téléphone ou une tablette ou un ordinateur, le client peut s’il désire bénéficier des certains services à distance (en ligne) via un progiciel spécial de clinique Mobile de Médecine de Famille (**Doktamobile**). Les services disponibles en télémédecines sont :',
     subServices: [
       {
         name: 'Télésuivi',
@@ -159,19 +164,19 @@ export const services = [
     name: 'Ambulance',
     color: '#FEF4E7',
     description:
-      "Les clients ont droit à un nombre d'évacuations gratuites par an à bord d'une ambulance pour être évacué à l'un de nos hôpitaux partenaires en ville de Goma ou vers l'aéroport.",
+      'Le client ayant souscrit à certain bouquet aura droit à nombre (quota) limité d’évacuation par   ambulance vers l’un des hôpitaux partenaire de CRESAMEF à de Goma ou vers l’aéroport. Ce quota sera fixé en fonction du type de package.',
   },
   {
     name: 'Prélèvement à domicile',
     color: '#F7FFFA',
     description:
-      "Les clients auront droit au prélèvement à domicile s'ils le souhaitent. Le coût du déplacement du technicien sera à la charge de la CMMF à un pourcentage dependant du paquet d'abonnement.",
+      'Le client ayant souscrit à certains paquets aura droit au prélèvement à domicile s’ils le souhaitent. Le coût du déplacement du technicien sera totalement ou partiellement à la charge de la CMMF en fonction du type de paquet.Pour ce qui est des examens, la CMMF supportera partiellement ou tatalement le coût des examens de labo repris sur la liste de Bilan circonstanciel du présent paquet.',
   },
   {
     name: 'Livraison des médicaments à domicile',
     color: '#FFF5F5',
     description:
-      "Les clients se verront livrer les médicaments à domicile. Il convient de noter que les coûts relatifs à l'achat des médicaments sont à la charge du Client. ",
+      'Les clients ayant souscrit à ce paquet se verront livrer les médicaments à domiciles. Il convient de noter que les médicaments sont à la charge du client exceptés ceux repris sur la liste bonus du paquet VIP. Les médicaments repris sur la liste Bonus paquet VIP seront livré sans frais supplémentaires. En revanche, pour les médicaments non répertoriés dans cette liste bonus, la livraison à domicile sera faite si et seulement si le client consent de payer à la CMMF l’équivalent du coût de l’achat du (des) médicament (s) ',
   },
   {
     name: 'Hospitalisation à domicile',
@@ -183,13 +188,13 @@ export const services = [
     name: 'Consultation à domicile (RDVIC) en dehors de Goma',
     color: '#FDECEA',
     description:
-      "Les clientspeuvent bénéficier d'une consultation à domicile ou dans leur hôtel à Kinshasa, à condition de payer les frais de déplacement du médecin, soit 5 $ (au taux du jour). La CMMF paiera les honoraires du médecin une seule fois par mois.",
+      'Si le Client est en séjour à Kinshasa ou dans une autre ville où CRESAMEF a un point focal il pourra bénéficier de service de consultation à domicile ou dans son hôtel et même d’une orientation s’il désire fréquente une structure sanitaire client bénéficiera d’un suivi. Le cas échéant CRESAMEF couvrira totalement les honoraires du médecin point focal, en revanche le coût de transport du médecin sera couvert partiellement ou totalement par CRESAMEF en fonction du type de package.',
   },
   {
     name: 'Facilitation de tourisme médical & évacuation à l’étranger',
     color: '#F7FBFF',
     description:
-      "Si un membre d'un ménage  désire aller se faire soigner ou examiner à l'étranger (Burundi, Inde, ...), la CMMF lui facilitera la prise de contact et l'aidera à obtenir tous les renseignements nécessaires y relatifs. Cependant, il payera les frais de commission avec une réduction de 15%. Le coût relatif au voyage et aux soins à l'étranger sera à la charge du Client lui-même.",
+      'Le tourisme médical, tourisme de santé ou encore tourisme hospitalier, se réfère au déplacement dans un pays autre que le pays de résidence, dans le but de bénéficier d’un acte médical non disponible ou difficilement accessible dans son propre pays, soit pour des raisons de législation soit pour des raisons relatives à l’offre de soins. Si un un client désire aller se faire soigner ou examiner à l’étranger (Burundi, Inde, …), la CMMF lui facilitera la prise de contact et l’aidera à obtenir tous les renseignements nécessaires y relatifs. En principe CESAMEF empochera la commission qui lui sera versé par le client et la retro-comission versé par la structure à l’étranger. Certains paquets paquets prendront en charge la totalité de frais de commission et d’autre partiellement. En dehors desdits paquets, le client payera la totalité',
   },
   {
     name: 'Accompagnement médical',

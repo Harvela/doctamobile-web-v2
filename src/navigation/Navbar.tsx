@@ -1,7 +1,7 @@
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { Flowbite, Navbar } from 'flowbite-react';
 import React, { useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link, scroller } from 'react-scroll';
 import Cookies from 'universal-cookie';
 
 const cookies = new Cookies();
@@ -30,6 +30,11 @@ const customTheme: CustomFlowbiteTheme = {
 const NavbarGlobal: React.FC<NavbarProps> = () => {
   const [token, setToken] = React.useState<string | null>(null);
   useEffect(() => {
+    scroller.scrollTo('home', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+    });
     const tokend = cookies.get('token');
     setToken(tokend);
   }, []);
@@ -56,11 +61,11 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
         </div>
         <Navbar.Collapse>
           <Link
-            offset={-100}
             activeClass="text-primary-900 font-bold"
             to="home"
             smooth
             spy
+            offset={-100}
           >
             Accueil
           </Link>
@@ -78,7 +83,6 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
             to="services"
             smooth
             spy
-            offset={-100}
           >
             Nos services
           </Link>
