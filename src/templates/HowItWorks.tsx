@@ -3,7 +3,7 @@ import Link from 'next/link';
 const HowItWork = () => (
   <div
     id="how-it-work"
-    className="to-slate-white bg-gradient-to-b from-secondary-100 px-4 pt-[15px] lg:px-[100px]"
+    className="to-slate-white relative z-20 bg-gradient-to-b from-secondary-200 px-4 pt-[15px] lg:px-[100px]"
   >
     <h1 className="mb-8 mt-5 text-lg font-bold text-blue lg:text-2xl">
       Comment ça marche ?

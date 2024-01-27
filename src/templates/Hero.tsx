@@ -1,4 +1,4 @@
-import { Button, Carousel } from 'flowbite-react';
+import { Button, Carousel, TextInput } from 'flowbite-react';
 import Link from 'next/link';
 import React from 'react';
 
@@ -12,15 +12,16 @@ export type HeroProps = {
 const Hero: React.FC<HeroProps> = () => (
   <Background color="">
     <Section yPadding="lg:py-6">
+      <div className="-skew-6 absolute top-[-50px] mx-[30%] h-[120vh] w-[40%] -rotate-12 bg-primary-900 opacity-5 " />
       <div
-        className="mt-[60px] grid h-[50vh] items-center px-4 md:mt-[100px] md:grid-cols-2 lg:mt-[100px] lg:h-[80vh] lg:px-[100px]"
+        className="mt-[60px] grid h-[80vh] items-center px-4 md:mt-[100px] md:grid-cols-2 lg:mt-[100px] lg:h-[90vh] lg:px-[100px]"
         id="home"
       >
-        <div className="pr-10">
+        <div className="md:pr-10">
           <span className="rounded-[15px] bg-primary-900/10 px-2 py-1 text-[6px] font-semibold text-primary-900 lg:text-[10px]">
             L’hôpital chez vous à la maison
           </span>
-          <h1 className="mt-4 text-[16px] font-bold text-blue lg:text-[22px]">
+          <h1 className="mt-4 text-[24px] font-bold text-blue lg:text-[28px]">
             Une équipe mobile des spécialistes en
             <span className="ml-2 text-secondary-900">
               Médecine de Famille
@@ -28,22 +29,27 @@ const Hero: React.FC<HeroProps> = () => (
             juste pour vous et{' '}
             <span className="text-primary-900">votre famille</span>
           </h1>
-          <h2 className="mt-[20px] text-[10px] text-[#666] lg:text-[12px]">
+          <h2 className="mt-[20px] text-[15px] text-[#666] md:text-[15px]">
             Avec Doktamobile, accédez à une équipe permanente de médecins de
             famille de la Clinique mobile de Médecine de Famille (CMMF) de
             CRESAMEF CONSULTING, et d’autres spécialistes pouvant vous consulter
-            quand et où vous voulez (à votre domicile, à l’hôtel, à distance, au
-            travail, etc.).
+            quand et où vous voulez.
           </h2>
-          <div className="mt-[20px] flex flex-col gap-2 lg:flex-row lg:gap-5">
-            <Button color="primary" className="mt-4 bg-primary-900 text-white">
-              <Link href="/about">Nous Contacter</Link>
-            </Button>
+          <div className="mt-[20px] flex flex-col gap-5 lg:flex-row">
+            <div className="mb-[4px]">
+              <label className="text-[12px] font-bold text-primary-900">
+                Votre numéro de téléphone / email
+              </label>
+              <TextInput
+                placeholder="+243990455626"
+                className="mt-3 h-[40px] md:w-[250px]"
+              />
+            </div>
             <Button
-              color="primary"
-              className="mt-4 bg-primary-300 text-primary-900"
+              color="white"
+              className="animate-infinite h-[45px] animate-wiggle bg-primary-900 text-white md:self-end"
             >
-              <Link href="#pricing">Souscrire ma famille</Link>
+              <Link href="#pricing">Commencez par ici</Link>
             </Button>
           </div>
         </div>
