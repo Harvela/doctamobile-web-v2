@@ -1,15 +1,14 @@
 import { Button, Carousel, TextInput } from 'flowbite-react';
-import Link from 'next/link';
 import React from 'react';
 
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 
 export type HeroProps = {
-  setOpenModal?: (value: boolean) => void;
+  setOpenModal: (value: boolean) => void;
 };
 
-const Hero: React.FC<HeroProps> = () => (
+const Hero: React.FC<HeroProps> = ({ setOpenModal }) => (
   <Background color="">
     <Section yPadding="lg:py-6">
       <div className="-skew-6 absolute top-[-50px] mx-[30%] h-[120vh] w-[40%] -rotate-12 bg-primary-900 opacity-5 " />
@@ -46,10 +45,11 @@ const Hero: React.FC<HeroProps> = () => (
               />
             </div>
             <Button
+              onClick={() => setOpenModal(true)}
               color="white"
               className="animate-infinite h-[45px] animate-wiggle bg-primary-900 text-white md:self-end"
             >
-              <Link href="#pricing">Commencez par ici</Link>
+              Commencez par ici
             </Button>
           </div>
         </div>

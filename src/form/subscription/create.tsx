@@ -24,7 +24,7 @@ export const SubmitSubscription: React.FC<SubscriptionProps> = (props) => {
         <button
           className="rounded-lg bg-primary-900 px-4 py-2 text-sm text-white"
           onClick={() => {
-            props.setStep(2);
+            props.setStep(5);
           }}
         >
           Continuer

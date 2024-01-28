@@ -15,12 +15,14 @@ import { Service } from './Services';
 
 const Base = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [openSubscriptionModal, setOpenSubscriptionModal] = useState(false);
   const [subscriptionPaquet, setSubscriptionPaquet] = useState('' as string);
 
   return (
     <div className="text-gray-600 antialiased">
       <Meta title={AppConfig.title} description={AppConfig.description} />
-      <DispatcherModal />
+      {openSubscriptionModal && <DispatcherModal />}
+
       {openModal && (
         <RegisterFamily
           subscriptionPaquet={subscriptionPaquet}
@@ -29,7 +31,7 @@ const Base = () => {
         />
       )}
       <Navbar />
-      <Hero setOpenModal={setOpenModal} />
+      <Hero setOpenModal={setOpenSubscriptionModal} />
       <HowItWork />
       <Service />
       <Pricing
