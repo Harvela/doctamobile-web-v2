@@ -62,7 +62,7 @@ const Service: React.FC = () => {
       id="services"
     >
       <h1 className="mb-8 mt-5 text-lg font-bold text-blue lg:text-2xl">
-        Nos services
+        Tous nos services
       </h1>
       <div className="flex w-full flex-col gap-8 bg-primary-200 p-4 lg:flex-row lg:p-8">
         <div className="z-50 w-full rounded-xl bg-white p-4 lg:h-[70vh] lg:w-[30%] lg:p-8">
@@ -98,6 +98,10 @@ const Service: React.FC = () => {
                   marginTop: '20px',
                 };
               },
+              menuList: (base) => ({
+                ...base,
+                backgroundColor: '#fff',
+              }),
             }}
           />
         </div>

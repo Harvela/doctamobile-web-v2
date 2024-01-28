@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { DispatcherModal } from '@/form';
 import { Navbar } from '@/navigation/Navbar';
 
 import { Meta } from '../layout/Meta';
@@ -19,7 +20,7 @@ const Base = () => {
   return (
     <div className="text-gray-600 antialiased">
       <Meta title={AppConfig.title} description={AppConfig.description} />
-
+      <DispatcherModal />
       {openModal && (
         <RegisterFamily
           subscriptionPaquet={subscriptionPaquet}
