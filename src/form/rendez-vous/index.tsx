@@ -11,20 +11,26 @@ export type RendezVousProps = {
   data: any;
   setStep: (step: number) => void;
   step: number;
+  onClose: () => void;
 };
 
 export type RendezVousType = {
   id: string;
-  fullName: string;
-  patient: string;
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  city?: string;
   symptoms: string;
-  ageRange: string;
+  dateOfBirth: Date;
   sexe: string;
   address: string;
-  date?: Date;
-  startTime?: Date;
-  endTime?: Date;
   language: string;
+  requestedTimeFrom?: Date;
+  requestedTimeTo?: Date;
+  requestedTime?: Date;
+  requestedPlace?: string;
+  requestedAddress?: string;
+  preferredNotificationWay?: string;
 };
 
 export type RendezVousFormProps = {
@@ -32,17 +38,8 @@ export type RendezVousFormProps = {
   email?: string;
 };
 
-export const RendezVousForm: React.FC<RendezVousFormProps> = () => {
-  const [data, setData] = useState<RendezVousType>({
-    id: '',
-    fullName: '',
-    patient: '',
-    symptoms: '',
-    ageRange: '',
-    sexe: '',
-    address: '',
-    language: '',
-  });
+export const RendezVousForm: React.FC<RendezVousFormProps> = (props) => {
+  const [data, setData] = useState<RendezVousType>();
   const [step, setStep] = useState<number>(0);
   const stepsComponent = [
     <IdentityRendezVous
@@ -51,6 +48,7 @@ export const RendezVousForm: React.FC<RendezVousFormProps> = () => {
       setStep={setStep}
       step={step}
       data={data}
+      onClose={props.onClose}
     />,
     <SymptomRendezVous
       key="symptoms"
@@ -58,6 +56,7 @@ export const RendezVousForm: React.FC<RendezVousFormProps> = () => {
       setStep={setStep}
       step={step}
       data={data}
+      onClose={props.onClose}
     />,
     <Identity2RendezVous
       key="identity2"
@@ -65,6 +64,7 @@ export const RendezVousForm: React.FC<RendezVousFormProps> = () => {
       setStep={setStep}
       step={step}
       data={data}
+      onClose={props.onClose}
     />,
     <AddressRendezVous
       key="address"
@@ -72,6 +72,7 @@ export const RendezVousForm: React.FC<RendezVousFormProps> = () => {
       setStep={setStep}
       step={step}
       data={data}
+      onClose={props.onClose}
     />,
     <PlaceRendezVous
       key="place"
@@ -79,6 +80,7 @@ export const RendezVousForm: React.FC<RendezVousFormProps> = () => {
       setStep={setStep}
       step={step}
       data={data}
+      onClose={props.onClose}
     />,
   ];
   return <>{stepsComponent[step]}</>;

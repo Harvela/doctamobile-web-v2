@@ -4,7 +4,12 @@ import { useState } from 'react';
 import { RendezVousForm } from './rendez-vous';
 import { SubscriptionForm } from './subscription';
 
-export const DispatcherModal: React.FC = () => {
+type DispatcherModalProps = {
+  onClose: () => void;
+  show: boolean;
+};
+
+export const DispatcherModal: React.FC<DispatcherModalProps> = (props) => {
   const [showRendezVous, setShowRendezVous] = useState(false);
   const [showSubscription, setShowSubscription] = useState(false);
   return (
@@ -24,7 +29,12 @@ export const DispatcherModal: React.FC = () => {
           }}
         />
       )}
-      <Modal show position="center">
+      <Modal
+        show={props.show}
+        position="center"
+        onClose={props.onClose}
+        dismissible
+      >
         <Modal.Body className="flex flex-col gap-5">
           <h3 className="rounded- ml-[-20px] mt-[-20px] p-4 text-[16px] font-semibold text-blue">
             Comment voulez-vous proceder ?
@@ -39,7 +49,7 @@ export const DispatcherModal: React.FC = () => {
               <span className="h-[25px] w-[25px] rounded-[12px] bg-blue pt-[3px] text-secondary-200">
                 1
               </span>
-              <span className="text-[14px] font-semibold text-blue">
+              <span className="text-left text-[14px] font-semibold text-blue">
                 Je veux prendre un rendez-vous
               </span>
             </button>
@@ -54,7 +64,7 @@ export const DispatcherModal: React.FC = () => {
               <span className="h-[25px] w-[25px] rounded-[12px] bg-blue pt-[3px] text-secondary-200">
                 2
               </span>
-              <span className="text-[14px] font-semibold text-blue">
+              <span className="text-left text-[14px] font-semibold text-blue">
                 Je veux souscrire ma famille
               </span>
             </button>

@@ -6,7 +6,7 @@ export const pricesList = [
         title: '1 - 4 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$0',
-        priceList: { month: 25, trimestre: 72.5, semestre: 142.5, year: 270 },
+        priceList: { month: 25, trimestre: 72.5, semestre: 142.5, annee: 270 },
         list: [
           'Consultation sur demande ',
           'Visite à Domicile de suivi ',
@@ -14,13 +14,14 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
+        paquet: 'JAMA',
       },
       {
         id: 2,
         title: '5 - 8 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$20',
-        priceList: { month: 35, trimestre: 101.5, semestre: 199.5, year: 378 },
+        priceList: { month: 35, trimestre: 101.5, semestre: 199.5, annee: 378 },
         list: [
           'Consultation sur demande ',
           'Visite à Domicile de suivi ',
@@ -28,13 +29,14 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
+        paquet: 'JAMA',
       },
       {
         id: 3,
         title: '9 - 12 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$40',
-        priceList: { month: 35, trimestre: 101.5, semestre: 199.5, year: 378 },
+        priceList: { month: 35, trimestre: 101.5, semestre: 199.5, annee: 378 },
         list: [
           'Consultation sur demande ',
           'Visite à Domicile de suivi ',
@@ -42,13 +44,14 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
+        paquet: 'JAMA',
       },
       {
         id: 4,
         title: '13 - 15 personnes',
         desc: 'Best option for personal use & for your next project.',
         price: '$100',
-        priceList: { month: 45, trimestre: 130.5, semestre: 256.5, year: 486 },
+        priceList: { month: 45, trimestre: 130.5, semestre: 256.5, annee: 486 },
         list: [
           'Consultation sur demande ',
           'Visite à Domicile de suivi ',
@@ -56,6 +59,7 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
+        paquet: 'JAMA',
       },
     ],
     name: 'JAMA A',
@@ -75,6 +79,7 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
+        paquet: 'JAMA',
       },
       {
         id: 2,
@@ -89,6 +94,7 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
+        paquet: 'JAMA',
       },
       {
         id: 3,
@@ -103,6 +109,7 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
+        paquet: 'JAMA',
       },
       {
         id: 4,
@@ -117,6 +124,7 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
+        paquet: 'JAMA',
       },
     ],
     name: 'JAMA B',
@@ -129,10 +137,10 @@ export const pricesList = [
         desc: 'Best option for personal use & for your next project.',
         price: '$0',
         priceList: {
-          month: '$50',
-          trimestre: '$145',
-          semestre: '$285',
-          annee: '$540',
+          month: 50,
+          trimestre: 145,
+          semestre: 285,
+          annee: 540,
         },
         list: [
           'Paquet JAMA +',
@@ -145,6 +153,7 @@ export const pricesList = [
           'Facilitation de tourisme médical & évacuation à l’étranger ( Le client paye les frais de commission avec une réduction de 10% coût relatif au voyage )',
           'Accompagnement médical avec 25% des frais et le billet retour pour le medecin prise en charge par CRESAMEF',
         ],
+        paquet: 'AFYA',
       },
       {
         id: 2,
@@ -152,10 +161,10 @@ export const pricesList = [
         desc: 'Best option for personal use & for your next project.',
         price: '$20',
         priceList: {
-          month: '$75',
-          trimestre: '$217.5',
-          semestre: '$427.5',
-          annee: '$810',
+          month: 75,
+          trimestre: 217.5,
+          semestre: 427.5,
+          annee: 810,
         },
         list: [
           'Paquet JAMA +',
@@ -168,6 +177,7 @@ export const pricesList = [
           'Facilitation de tourisme médical & évacuation à l’étranger ( Le client paye les frais de commission avec une réduction de 10% coût relatif au voyage )',
           'Accompagnement médical avec 25% des frais et le billet retour pour le medecin prise en charge par CRESAMEF',
         ],
+        paquet: 'AFYA',
       },
       {
         id: 4,
@@ -175,10 +185,10 @@ export const pricesList = [
         desc: 'Best option for personal use & for your next project.',
         price: '$100',
         priceList: {
-          month: '$100',
-          trimestre: '$290',
-          semestre: '$570',
-          annee: '$1080',
+          month: 100,
+          trimestre: 290,
+          semestre: 570,
+          annee: 1080,
         },
         list: [
           'Paquet JAMA +',
@@ -191,6 +201,7 @@ export const pricesList = [
           'Facilitation de tourisme médical & évacuation à l’étranger ( Le client paye les frais de commission avec une réduction de 15% coût relatif au voyage )',
           'Accompagnement médical avec 25% des frais et le billet retour pour le medecin prise en charge par CRESAMEF',
         ],
+        paquet: 'AFYA',
       },
     ],
     name: 'AFIA ',
@@ -203,10 +214,10 @@ export const pricesList = [
         desc: 'Best option for personal use & for your next project.',
         price: '$0',
         priceList: {
-          month: '$150',
-          trimestre: '$435',
-          semestre: '$855',
-          annee: '$1620',
+          month: 150,
+          trimestre: 435,
+          semestre: 855,
+          annee: 1620,
         },
         list: [
           'Paquet AFIA +',
@@ -219,6 +230,7 @@ export const pricesList = [
           'Accompagnement d’un malade à Gisenyi (50% des frais de documents pour CRESAMEF)',
           'Accompagnement d’un malade à Kigali et Bujumbura  (50% des frais de documents pour CRESAMEF)',
         ],
+        paquet: 'VIP',
       },
       {
         id: 2,
@@ -226,10 +238,10 @@ export const pricesList = [
         desc: 'Best option for personal use & for your next project.',
         price: '$20',
         priceList: {
-          month: '$200',
-          trimestre: '$580',
-          semestre: '$1140',
-          annee: '$2160',
+          month: 200,
+          trimestre: 580,
+          semestre: 1140,
+          annee: 2160,
         },
         list: [
           'Paquet AFIA +',
@@ -242,6 +254,7 @@ export const pricesList = [
           'Accompagnement d’un malade à Gisenyi (100% des frais de documents pour CRESAMEF)',
           'Accompagnement d’un malade à Kigali et Bujumbura  (100% des frais de documents pour CRESAMEF)',
         ],
+        paquet: 'VIP',
       },
       {
         id: 4,
@@ -249,10 +262,10 @@ export const pricesList = [
         desc: 'Best option for personal use & for your next project.',
         price: '$100',
         priceList: {
-          month: '$250',
-          trimestre: '$725',
-          semestre: '$1425',
-          annee: '$2700',
+          month: 250,
+          trimestre: 725,
+          semestre: 1425,
+          annee: 2700,
         },
         list: [
           'Paquet AFIA +',
@@ -266,6 +279,7 @@ export const pricesList = [
           'Accompagnement d’un malade à Kigali et Bujumbura  (100% des frais de documents pour CRESAMEF)',
           'Achat médicaments (50% des spécialités sera pris en charge par CRESAMEF 1 fois/mois)',
         ],
+        paquet: 'VIP',
       },
     ],
     name: 'VIP',

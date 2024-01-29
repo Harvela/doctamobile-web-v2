@@ -9,7 +9,7 @@ import Counter from './Counter';
 import { Footer } from './Footer';
 import { Hero } from './Hero';
 import { HowItWork } from './HowItWorks';
-import { Pricing } from './Pricing';
+import { PricingV2 } from './PricingV2';
 import { RegisterFamily } from './RegisterFamily';
 import { Service } from './Services';
 
@@ -21,7 +21,12 @@ const Base = () => {
   return (
     <div className="text-gray-600 antialiased">
       <Meta title={AppConfig.title} description={AppConfig.description} />
-      {openSubscriptionModal && <DispatcherModal />}
+      <DispatcherModal
+        onClose={() => {
+          setOpenSubscriptionModal(false);
+        }}
+        show={openSubscriptionModal}
+      />
 
       {openModal && (
         <RegisterFamily
@@ -34,7 +39,7 @@ const Base = () => {
       <Hero setOpenModal={setOpenSubscriptionModal} />
       <HowItWork />
       <Service />
-      <Pricing
+      <PricingV2
         setOpenModal={setOpenModal}
         setSubscriptionPaquet={setSubscriptionPaquet}
       />

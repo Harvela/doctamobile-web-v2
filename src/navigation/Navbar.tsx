@@ -42,7 +42,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
     <Flowbite theme={{ theme: customTheme }}>
       <Navbar
         className="px-4 lg:px-[100px]"
-        style={{ position: 'fixed', width: '100%', zIndex: 99999999, top: 0 }}
+        style={{ position: 'fixed', width: '100%', zIndex: 40, top: 0 }}
       >
         <Navbar.Brand href="#">
           <img

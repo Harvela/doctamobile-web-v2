@@ -4,7 +4,7 @@ import type { RendezVousProps } from '.';
 
 export const IdentityRendezVous: React.FC<RendezVousProps> = (props) => {
   return (
-    <Modal show position="center">
+    <Modal show position="center" onClose={props.onClose}>
       <Modal.Header className="border-0">
         <h3 className="rounded- ml-[-20px] mt-[-20px] rounded-t-[15px]  rounded-br-[15px] bg-secondary-100 p-4 text-[14px] font-semibold text-blue">
           Demande de rendez-vous
