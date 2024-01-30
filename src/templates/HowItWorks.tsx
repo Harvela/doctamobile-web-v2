@@ -35,7 +35,7 @@ const HowItWork = () => (
         <h2 className="text-md mb-6 font-semibold">
           Vous avez la possibilité d&apos;accéder à nos services par la suite.
         </h2>
-        <div className="flex flex-col gap-3 md:grid md:grid-cols-3 lg:grid lg:grid-cols-3">
+        <div className="flex flex-col gap-3 sm:hidden md:grid md:grid-cols-3 lg:grid lg:grid-cols-3">
           <div className=" rounded-xl border border-dashed border-white p-2">
             <img
               src="/assets/images/how-it-work/med3.svg"

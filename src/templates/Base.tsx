@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { DispatcherModal } from '@/form';
 import { Navbar } from '@/navigation/Navbar';
 
 import { Meta } from '../layout/Meta';
@@ -8,17 +9,24 @@ import Counter from './Counter';
 import { Footer } from './Footer';
 import { Hero } from './Hero';
 import { HowItWork } from './HowItWorks';
-import { Pricing } from './Pricing';
+import { PricingV2 } from './PricingV2';
 import { RegisterFamily } from './RegisterFamily';
 import { Service } from './Services';
 
 const Base = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [openSubscriptionModal, setOpenSubscriptionModal] = useState(false);
   const [subscriptionPaquet, setSubscriptionPaquet] = useState('' as string);
 
   return (
     <div className="text-gray-600 antialiased">
       <Meta title={AppConfig.title} description={AppConfig.description} />
+      <DispatcherModal
+        onClose={() => {
+          setOpenSubscriptionModal(false);
+        }}
+        show={openSubscriptionModal}
+      />
 
       {openModal && (
         <RegisterFamily
@@ -28,10 +36,10 @@ const Base = () => {
         />
       )}
       <Navbar />
-      <Hero setOpenModal={setOpenModal} />
+      <Hero setOpenModal={setOpenSubscriptionModal} />
       <HowItWork />
       <Service />
-      <Pricing
+      <PricingV2
         setOpenModal={setOpenModal}
         setSubscriptionPaquet={setSubscriptionPaquet}
       />

@@ -6,7 +6,7 @@ import {
   Spinner,
   TextInput,
 } from 'flowbite-react';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export type RegisterFamilyProps = {
   // Prop types go here
@@ -22,6 +22,13 @@ const RegisterFamily: React.FC<RegisterFamilyProps> = ({
 }) => {
   const [success, setSuccess] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
+  const [initialMail, setInitialMail] = React.useState('');
+  useEffect(() => {
+    const email = window.localStorage.getItem('email');
+    if (email) {
+      setInitialMail(email);
+    }
+  }, []);
   const onSubmit = async (event: any) => {
     event.preventDefault();
     if (loading) return;
@@ -101,7 +108,7 @@ const RegisterFamily: React.FC<RegisterFamilyProps> = ({
             </div>
             <div>
               <div className="mb-2 block">
-                <Label htmlFor="small" value="Numero de telephone" />
+                <Label htmlFor="small" value="Numero de telephone / Email" />
               </div>
               <TextInput
                 required
@@ -109,6 +116,7 @@ const RegisterFamily: React.FC<RegisterFamilyProps> = ({
                 id="small"
                 type="text"
                 sizing="sm"
+                defaultValue={initialMail}
               />
             </div>
             <div>
