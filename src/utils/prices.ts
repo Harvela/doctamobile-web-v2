@@ -14,7 +14,7 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
-        paquet: 'JAMA',
+        paquet: 'JAMAA',
       },
       {
         id: 2,
@@ -29,7 +29,7 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
-        paquet: 'JAMA',
+        paquet: 'JAMAA',
       },
       {
         id: 3,
@@ -44,7 +44,7 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
-        paquet: 'JAMA',
+        paquet: 'JAMAA',
       },
       {
         id: 4,
@@ -59,10 +59,10 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
-        paquet: 'JAMA',
+        paquet: 'JAMAA',
       },
     ],
-    name: 'JAMA A',
+    name: 'JAMAA',
   },
   {
     prices: [
@@ -79,7 +79,7 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
-        paquet: 'JAMA',
+        paquet: 'JAMAA',
       },
       {
         id: 2,
@@ -94,7 +94,7 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
-        paquet: 'JAMA',
+        paquet: 'JAMAA',
       },
       {
         id: 3,
@@ -109,7 +109,7 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
-        paquet: 'JAMA',
+        paquet: 'JAMAA',
       },
       {
         id: 4,
@@ -124,7 +124,7 @@ export const pricesList = [
           'Services Promotion & prévention',
           'Télémédecine (50% des frais payé par CRESAMEF)',
         ],
-        paquet: 'JAMA',
+        paquet: 'JAMAA',
       },
     ],
     name: 'JAMA B',
@@ -204,7 +204,7 @@ export const pricesList = [
         paquet: 'AFYA',
       },
     ],
-    name: 'AFIA ',
+    name: 'AFYA',
   },
   {
     prices: [
@@ -278,6 +278,87 @@ export const pricesList = [
           'Accompagnement d’un malade à Gisenyi (100% des frais de documents pour CRESAMEF)',
           'Accompagnement d’un malade à Kigali et Bujumbura  (100% des frais de documents pour CRESAMEF)',
           'Achat médicaments (50% des spécialités sera pris en charge par CRESAMEF 1 fois/mois)',
+        ],
+        paquet: 'VIP',
+      },
+    ],
+    name: 'VIP',
+  },
+];
+
+export const overviewPricingList = [
+  {
+    prices: [
+      {
+        id: 1,
+        title: '1 - 4 personnes',
+        desc: 'Best option for personal use & for your next project.',
+        price: '$0',
+        priceList: { month: 25, trimestre: 72.5, semestre: 142.5, annee: 270 },
+        list: [
+          'Consultation sur demande ',
+          'Visite à Domicile de suivi ',
+          '1 Consultation Super Spéciale & spécifique par trimestre',
+          'Services Promotion & prévention',
+          'Télémédecine (50% des frais payé par CRESAMEF)',
+        ],
+        paquet: 'JAMAA',
+      },
+    ],
+    name: 'JAMAA',
+  },
+  {
+    prices: [
+      {
+        id: 1,
+        title: 'AFIA 1',
+        desc: 'Best option for personal use & for your next project.',
+        price: '$0',
+        priceList: {
+          month: 50,
+          trimestre: 145,
+          semestre: 285,
+          annee: 540,
+        },
+        list: [
+          'Tout dans Paquet JAMAA +',
+          'Check-up santé (bilan de santé)',
+          'Evacuations par ambulance/an.',
+          'Prélèvement à domicile',
+          'Livraison des médicaments à domicile',
+          'Hospitalisation à Domicile',
+          'Consultation à Domicile en dehors de Goma/mois',
+          'Facilitation de tourisme médical & évacuation à l’étranger',
+          'Accompagnement médical',
+        ],
+        paquet: 'AFYA',
+      },
+    ],
+    name: 'AFYA',
+  },
+  {
+    prices: [
+      {
+        id: 1,
+        title: 'VIP /2',
+        desc: 'Best option for personal use & for your next project.',
+        price: '$0',
+        priceList: {
+          month: 150,
+          trimestre: 435,
+          semestre: 855,
+          annee: 1620,
+        },
+        list: [
+          'Tout dans Paquet AFYA +',
+          'Visite à domicile (VAD) mensuel systématique ',
+          '+4 evacuations par ambulance/an.',
+          'Facilitation de tourisme médical & évacuation à l’étranger',
+          'Gardiennage médical ',
+          'Accompagnement d’un malade à Bukavu ',
+          'Accompagnement d’un malade à Kinshasa & Lubumbashi ',
+          'Accompagnement d’un malade à Gisenyi',
+          'Accompagnement d’un malade à Kigali et Bujumbura',
         ],
         paquet: 'VIP',
       },
