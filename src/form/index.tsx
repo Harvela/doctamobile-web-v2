@@ -2,7 +2,7 @@ import { Modal } from 'flowbite-react';
 import { useState } from 'react';
 
 import { RendezVousForm } from './rendez-vous';
-import { SubscriptionForm } from './subscription';
+// import { SubscriptionForm } from './subscription';
 
 type DispatcherModalProps = {
   onClose: () => void;
@@ -11,7 +11,7 @@ type DispatcherModalProps = {
 
 export const DispatcherModal: React.FC<DispatcherModalProps> = (props) => {
   const [showRendezVous, setShowRendezVous] = useState(false);
-  const [showSubscription, setShowSubscription] = useState(false);
+  // const [showSubscription, setShowSubscription] = useState(false);
   return (
     <>
       {showRendezVous && (
@@ -22,13 +22,13 @@ export const DispatcherModal: React.FC<DispatcherModalProps> = (props) => {
         />
       )}
 
-      {showSubscription && (
-        <SubscriptionForm
-          onClose={() => {
-            setShowSubscription(false);
-          }}
-        />
-      )}
+      {/* {showSubscription && (
+        // <SubscriptionForm
+        //   onClose={() => {
+        //     setShowSubscription(false);
+        //   }}
+        // />
+      )} */}
       <Modal
         show={props.show}
         position="center"
@@ -58,7 +58,7 @@ export const DispatcherModal: React.FC<DispatcherModalProps> = (props) => {
             <button
               className="flex flex-row items-center gap-5 rounded-[15px] bg-primary-300 px-5 py-2 text-[14px] text-blue"
               onClick={() => {
-                setShowSubscription(true);
+                // setShowSubscription(true);
               }}
             >
               <span className="h-[25px] w-[25px] rounded-[12px] bg-blue pt-[3px] text-secondary-200">

@@ -86,7 +86,7 @@ const Service: React.FC = () => {
             className="border-b-1 border border-x-0 border-t-0 border-[#99A0B4] text-sm font-semibold text-blue"
             styles={{
               option: (base, { data }) => {
-                const optionData = data as ServiceOption; // Explicitly specify the type
+                const optionData = data as ServiceOption;
                 return {
                   ...base,
                   backgroundColor: optionData.color,
