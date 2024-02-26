@@ -22,6 +22,7 @@
     "react": "^18.2.0",
     "react-countup": "^6.5.0",
     "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10",
     "react-scroll": "^1.9.0",
     "react-select": "^5.8.0",
     "styled-jsx-plugin-postcss": "^4.0.1",

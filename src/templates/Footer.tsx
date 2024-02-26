@@ -88,7 +88,7 @@ const Footer = () => (
           </div>
         </div>
 
-        <div className="grid gap-8 sm:gap-6 md:grid-cols-3 lg:grid-cols-3">
+        <div className="grid gap-8 sm:gap-6 md:grid-cols-2 lg:grid-cols-2">
           <div>
             <h2 className="mb-6 text-sm font-semibold uppercase text-white">
               Entreprise
@@ -128,7 +128,7 @@ const Footer = () => (
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h2 className="mb-6 text-sm font-semibold uppercase text-white">
               Nous contacter
             </h2>
@@ -149,7 +149,7 @@ const Footer = () => (
                 Nous contacter
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
       <hr className="border-gray-200 dark:border-gray-700 sm:mx-auto" />

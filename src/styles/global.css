@@ -19,3 +19,46 @@ body {
     sans-serif;
   scroll-behavior: smooth;
 }
+
+/* CSS */
+@keyframes slideIn {
+  0% {
+    height: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    height: 90vh;
+    transform: translateY(0);
+  }
+}
+
+/* CSS */
+@keyframes slideInOpacity {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes slideToMiddle {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 40%;
+  }
+}
+
+.animatedSlideIn {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.animatedOpacity {
+  animation: slideInOpacity 0.5s ease-out forwards;
+}
+
+.animatedToMiddle {
+  animation: slideToMiddle 0.5s ease-out forwards;
+}

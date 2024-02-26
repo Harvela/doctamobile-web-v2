@@ -1,5 +1,6 @@
-import { Button, Modal } from 'flowbite-react';
+import { Button } from 'flowbite-react';
 import React from 'react';
+import { ChevronLeft } from 'react-feather';
 
 import { overviewPricingList, pricesList } from '@/utils/prices';
 
@@ -74,7 +75,10 @@ const PricingCard: React.FC<{
               /{frequency}
             </span>
           </div>
-          <ul role="list" className="mb-4 space-y-2 text-left">
+          <ul
+            role="list"
+            className="mb-4 max-h-[250px] space-y-2 overflow-y-scroll text-left"
+          >
             {(!isDetail
               ? overviewPricingList.find(
                   (o) => o.prices[0]?.paquet === p.paquet,
@@ -131,17 +135,23 @@ const PricingV2: React.FC<{
   return (
     <div className="bg-primary-900 pt-[15px]" id="pricing">
       {selectedPriceList.length > 0 && (
-        <Modal
-          size="xxl"
-          show
-          onClose={() => {
-            setSelectedPriceList([]);
-          }}
-        >
-          <Modal.Header>
-            <h3>Detail des prix</h3>
-          </Modal.Header>
-          <Modal.Body>
+        <div className="animatedOpacity fixed bottom-0 z-50 flex h-[100%] w-full flex-col items-center justify-end bg-[#000]/60">
+          <div className="animatedSlideIn h-[90%] w-[95%] overflow-y-scroll rounded-md bg-white p-5">
+            <div className="mx-2 mb-10 mt-8 flex flex-row">
+              <ChevronLeft
+                className="mr-4 cursor-pointer text-blue"
+                onClick={() => {
+                  setSelectedPriceList([]);
+                }}
+              />
+              <p className="font-bold uppercase text-blue">
+                <span className="text-primary-900">
+                  PAQUET {selectedPriceList[0]?.paquet}
+                </span>
+                {' - '}
+                Sous Categories
+              </p>
+            </div>
             <PricingCard
               prices={selectedPriceList as PriceType[]}
               frequency={activeFrequency}
@@ -152,8 +162,8 @@ const PricingV2: React.FC<{
               activeTab={''}
               isDetail
             />
-          </Modal.Body>
-        </Modal>
+          </div>
+        </div>
       )}
       <h1 className="mb-4 mt-5 text-center text-lg font-bold text-white lg:text-2xl">
         Nos paquets de souscription
