@@ -13,7 +13,9 @@ export const Identity2RendezVous: React.FC<RendezVousProps> = (props) => {
       <Modal.Body className="flex flex-col gap-5">
         <div>
           <span className="text-[14px] font-semibold text-blue">
-            Votre age se situe entre
+            {props.data.for === 'self'
+              ? 'Votre age se situe entre'
+              : 'Son age se situe entre'}
           </span>
           <Select
             className="mt-[10px]"
@@ -23,11 +25,20 @@ export const Identity2RendezVous: React.FC<RendezVousProps> = (props) => {
                 for: e.target.value,
               });
             }}
-          />
+          >
+            <option value="unknown">Inconnu</option>
+            <option value="baby">Bébé (0-2 ans)</option>
+            <option value="child">Enfant (3-12 ans)</option>
+            <option value="teenager">Adolescent (13-17 ans)</option>
+            <option value="adult">Adulte (18-64 ans)</option>
+            <option value="senior">Personne âgée (65 ans et plus)</option>
+          </Select>
         </div>
         <div>
           <span className="text-[14px] font-semibold text-blue">
-            Quelle est votre sexe ?
+            {props.data.for === 'self'
+              ? 'Quelle est votre sexe ?'
+              : 'Quelle est son sexe ?'}
           </span>
           <Select
             className="mt-[10px]"
@@ -37,7 +48,11 @@ export const Identity2RendezVous: React.FC<RendezVousProps> = (props) => {
                 for: e.target.value,
               });
             }}
-          />
+          >
+            <option value="M">Homme</option>
+            <option value="M">Femme</option>
+            <option value="M">Autre</option>
+          </Select>
         </div>
       </Modal.Body>
       <Modal.Footer>

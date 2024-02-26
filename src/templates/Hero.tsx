@@ -64,25 +64,11 @@ const Hero: React.FC<HeroProps> = ({ setOpenModal }) => {
             </div>
           </div>
           <div className="hidden items-end justify-end md:block lg:block">
-            <div className="flex flex-col items-end justify-end">
-              <img
-                src="/assets/images/home/img1.png"
-                alt="Hero"
-                className="rounded-md md:mr-[120px] md:w-[210px] lg:mr-[190px] lg:w-[250px]"
-              />
-              <img
-                src="/assets/images/home/img2.png"
-                alt="Hero"
-                className="mt-[-40px] rounded-md object-cover md:h-[270px]  md:w-[270px] lg:w-[320px]"
-              />
-              {/* <div className="absolute top-[40px] flex flex-col items-center justify-center">
-                <div className="mb-[6px] h-[8px] w-[80px] rotate-[-5deg] bg-primary-300" />
-                <p className="text-[12px] font-bold text-primary-900">
-                  MALADIES CHRONIQUES
-                </p>
-                <div className=" ml-[20px] mt-[5px] h-[8px] w-[80px] rotate-[-5deg] bg-secondary-200" />
-              </div> */}
-            </div>
+            <img
+              src="/assets/images/illustration-doktamobile.svg"
+              alt="Hero"
+              className="ml-auto rounded-md md:w-[30vw]"
+            />
           </div>
         </div>
       </Section>

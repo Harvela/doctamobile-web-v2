@@ -1,4 +1,4 @@
-import { Modal, Select } from 'flowbite-react';
+import { Modal, Select, TextInput } from 'flowbite-react';
 
 import type { RendezVousProps } from '.';
 
@@ -13,28 +13,33 @@ export const PlaceRendezVous: React.FC<RendezVousProps> = (props) => {
       <Modal.Body className="flex flex-col gap-5">
         <div>
           <span className="text-[14px] font-semibold text-blue">
-            Ou voulez vous vous faire consulter ?
+            Selectionner le lieu de la consultation
           </span>
           <Select
             className="mt-[10px]"
             onChange={(e) => {
               props.setData({
                 ...props.data,
-                for: e.target.value,
+                place: e.target.value,
               });
             }}
-          />
+          >
+            <option>A Domicile</option>
+            <option>En ligne ( Virtuel )</option>
+            <option>Au Travail</option>
+            <option>Autre</option>
+          </Select>
         </div>
         <div>
           <span className="text-[14px] font-semibold text-blue">
-            Quelles langues parlez vous ?
+            Selectionner la langue preférée?
           </span>
-          <Select
-            className="mt-[10px]"
+          <TextInput
+            className="mt-[10px] border-0 text-blue"
             onChange={(e) => {
               props.setData({
                 ...props.data,
-                for: e.target.value,
+                language: e.target.value,
               });
             }}
           />

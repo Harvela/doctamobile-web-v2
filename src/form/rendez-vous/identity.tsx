@@ -13,7 +13,7 @@ export const IdentityRendezVous: React.FC<RendezVousProps> = (props) => {
       <Modal.Body className="flex flex-col gap-5">
         <div>
           <span className="text-[14px] font-semibold text-blue">
-            Comment on vous appelle
+            Quel est votre nom
           </span>
           <TextInput
             className="mt-[10px] border-0 text-blue"
@@ -37,7 +37,10 @@ export const IdentityRendezVous: React.FC<RendezVousProps> = (props) => {
                 for: e.target.value,
               });
             }}
-          />
+          >
+            <option value="self">Moi même</option>
+            <option value="another">Une autre personne</option>
+          </Select>
         </div>
       </Modal.Body>
       <Modal.Footer>

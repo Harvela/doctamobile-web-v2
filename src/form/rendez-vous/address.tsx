@@ -13,14 +13,15 @@ export const AddressRendezVous: React.FC<RendezVousProps> = (props) => {
       <Modal.Body className="flex flex-col gap-5">
         <div>
           <span className="text-[14px] font-semibold text-blue">
-            Vous vivez A : ( tapez le nom quartier, avenue ou ville )
+            Vous vivez A : ( tapez le nom de l avenue, du quartier ou de la
+            ville )
           </span>
           <TextInput
             className="mt-[10px] border-0 text-blue"
             onChange={(e) => {
               props.setData({
                 ...props.data,
-                name: e.target.value,
+                address: e.target.value,
               });
             }}
           />
