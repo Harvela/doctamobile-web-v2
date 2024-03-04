@@ -1,15 +1,10 @@
-import { Button, TextInput } from 'flowbite-react';
 import React from 'react';
+import { Link } from 'react-scroll';
 
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 
-export type HeroProps = {
-  setOpenModal: (value: boolean) => void;
-};
-
-const Hero: React.FC<HeroProps> = ({ setOpenModal }) => {
-  const [email, setEmail] = React.useState('' as string);
+const Hero: React.FC = () => {
   return (
     <Background color="">
       <Section yPadding="lg:py-6">
@@ -36,31 +31,23 @@ const Hero: React.FC<HeroProps> = ({ setOpenModal }) => {
               CRESAMEF CONSULTING, et d’autres spécialistes pouvant vous
               consulter quand et où vous voulez.
             </h2>
-            <div className="mt-[20px] flex flex-col gap-5 md:flex-row">
-              <div className="mb-[4px]">
-                <label className="text-[12px] font-bold text-primary-900">
-                  Votre numéro de téléphone / email
-                </label>
-                <TextInput
-                  placeholder="+243990455626"
-                  className="mt-3 h-[40px] md:w-[250px]"
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
-                />
-              </div>
-              <Button
-                onClick={() => {
-                  if (email) {
-                    window.localStorage.setItem('email', email);
-                    setOpenModal(true);
-                  } else alert('Veuillez entrer votre email');
-                }}
-                color="white"
-                className="animate-infinite h-[45px] animate-wiggle bg-primary-900 text-white md:self-end"
+            <div className="mt-[28px] flex flex-col gap-5 md:flex-row">
+              <Link
+                to="pricing"
+                smooth
+                spy
+                offset={-100}
+                className=" z-50 w-[50%] cursor-pointer rounded-lg bg-primary-900 py-2 text-center text-sm text-white"
               >
-                Commencez par ici
-              </Button>
+                S&lsquo;abonner
+              </Link>
+              <a
+                href="https://app.doktamobile.com/myAppointments"
+                target="_blank"
+                className=" z-50 w-[50%] rounded-lg bg-primary-900 py-2 text-center text-sm text-white"
+              >
+                Demander rendez-vous
+              </a>
             </div>
           </div>
           <div className="hidden items-end justify-end md:block lg:block">

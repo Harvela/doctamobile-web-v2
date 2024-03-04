@@ -36,7 +36,7 @@ const Base = () => {
         />
       )}
       <Navbar />
-      <Hero setOpenModal={setOpenSubscriptionModal} />
+      <Hero />
       <HowItWork />
       <Service />
       <PricingV2
